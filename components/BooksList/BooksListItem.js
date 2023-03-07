@@ -30,7 +30,7 @@ const BooksListItem = ({ title, description }) => {
             <View style={styles.textContainer}>
               <Text>{title}</Text>
               <Text style={styles.description}>
-                {description.slice(0, 250)}
+                {description.slice(0, 175) + "..."}
               </Text>
             </View>
           </View>
