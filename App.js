@@ -17,10 +17,10 @@ export default function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const { data, error } = await supabase.from("books").select();
+      const { data, error } = await supabase.from("allbooks").select();
       console.log("loaded");
 
-      setData(data);
+      setData(data.slice(0, 10));
     };
     fetchData();
   }, [setData]);
