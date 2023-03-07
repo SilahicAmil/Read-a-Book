@@ -34,7 +34,7 @@ export default function App() {
         renderItem={({ item }) => {
           return <Text>{item.books_title}</Text>;
         }}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => item.books_id}
         numColumns={2}
       />
     </SafeAreaView>
