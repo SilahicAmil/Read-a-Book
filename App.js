@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import { useEffect, useState } from "react";
 
+import BooksListItem from "./components/BooksList/BooksListItem";
 import { StatusBar } from "expo-status-bar";
 import { supabase } from "./lib/supabase";
 
@@ -28,14 +29,25 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <Text>Read A Book</Text>
       <StatusBar style="auto" />
+      <View>
+        <Text>123</Text>
+        <Text>123</Text>
+        <Text>123</Text>
+        <Text>123</Text>
+        <Text>123</Text>
+      </View>
 
       <FlatList
         data={data}
         renderItem={({ item }) => {
-          return <Text>{item.books_title}</Text>;
+          return (
+            <BooksListItem
+              title={item.books_title}
+              description={item.books_description}
+            />
+          );
         }}
         keyExtractor={(item) => item.books_id}
-        numColumns={2}
       />
     </SafeAreaView>
   );
