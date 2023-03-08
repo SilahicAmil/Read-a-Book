@@ -1,3 +1,5 @@
+import * as SplashScreen from "expo-splash-screen";
+
 import {
   Button,
   FlatList,
@@ -9,8 +11,10 @@ import {
 import { useEffect, useState } from "react";
 
 import BooksListItem from "./components/BooksList/BooksListItem";
+import FeaturedBook from "./components/FeaturedBook/FeaturedBook";
 import { StatusBar } from "expo-status-bar";
 import { supabase } from "./lib/supabase";
+import { useFonts } from "expo-font";
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -25,18 +29,20 @@ export default function App() {
     fetchData();
   }, [setData]);
 
+  const [fontsLoaded] = useFonts({
+    "DMSerif-Display": require("./assets/fonts/DMSerifDisplay-Regular.ttf"),
+    "Kantumury-Pro": require("./assets/fonts/KantumruyPro-VariableFont_wght.ttf"),
+  });
+
+  if (!fontsLoaded) {
+    return;
+  }
+
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Read A Book</Text>
       <StatusBar style="auto" />
-      <View>
-        <Text>123</Text>
-        <Text>123</Text>
-        <Text>123</Text>
-        <Text>123</Text>
-        <Text>123</Text>
-      </View>
-
+      <FeaturedBook title="Secret Garden" runtime="9:08:25" />
+      <Text style={styles.title}>Popular Books</Text>
       <FlatList
         data={data}
         renderItem={({ item }) => {
@@ -60,5 +66,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     gap: 12,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    justifyContent: "space-around",
+    alignItems: "baseline",
   },
 });
