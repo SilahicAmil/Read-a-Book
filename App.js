@@ -1,3 +1,4 @@
+import { Entypo } from "@expo/vector-icons";
 import HomeScreen from "./screens/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { Text } from "react-native";
@@ -25,7 +26,10 @@ export default function App() {
           options={{
             title: "Read(a)Book",
             headerLeft: () => {
-              return <Text>LOGO</Text>;
+              return <Entypo name="book" size={24} color="black" />;
+            },
+            tabBarIcon: () => {
+              return <Entypo name="book" size={24} color="black" />;
             },
           }}
         />
