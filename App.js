@@ -1,6 +1,7 @@
 import { Entypo } from "@expo/vector-icons";
 import HomeScreen from "./screens/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
+import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useFonts } from "expo-font";
 
@@ -18,15 +19,42 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerLeft: () => {
+            return (
+              <Entypo
+                name="book"
+                size={24}
+                color="black"
+                style={styles.leftLogo}
+              />
+            );
+          },
+          headerStyle: {
+            backgroundColor: "#f4511e",
+          },
+          headerTitleAlign: "left",
+          headerRight: () => {
+            return (
+              <Entypo
+                name="menu"
+                size={24}
+                color="black"
+                style={styles.rightLogo}
+              />
+            );
+          },
+        }}
+      >
         <Tab.Screen
           name="Home"
           component={HomeScreen}
           options={{
             title: "Read(a)Book",
-            headerLeft: () => {
-              return <Entypo name="book" size={24} color="black" />;
-            },
+            tabBarLabelPosition: "below-icon",
+
             tabBarIcon: () => {
               return <Entypo name="book" size={24} color="black" />;
             },
@@ -37,3 +65,12 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  rightLogo: {
+    marginRight: 8,
+  },
+  leftLogo: {
+    marginLeft: 12,
+  },
+});

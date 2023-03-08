@@ -48,9 +48,8 @@ const styles = StyleSheet.create({
     width: "100%",
     padding: 8,
     height: 300,
-    display: "inline",
     position: "relative",
-    backgroundColor: "white",
+    backgroundColor: "#fff",
     justifyContent: "center",
     marginTop: 24,
     marginBottom: 32,
@@ -62,6 +61,7 @@ const styles = StyleSheet.create({
   },
   featured: {
     fontSize: 24,
+    marginBottom: 10,
     textAlign: "left",
     fontFamily: "DMSerif-Display",
   },
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.57,
     shadowRadius: 4.65,
+    elevation: 8,
   },
 
   description: {
