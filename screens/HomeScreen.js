@@ -1,4 +1,4 @@
-import { FlatList, SafeAreaView, StyleSheet, Text } from "react-native";
+import { FlatList, SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { useEffect, useState } from "react";
 
 import BooksListItem from "../components/BooksList/BooksListItem";
@@ -23,7 +23,9 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
       <FeaturedBook title="Secret Garden" runtime="9:08:25" />
-      <Text style={styles.title}>Popular Books</Text>
+      <View style={styles.titleContainer}>
+        <Text style={styles.title}>Popular Books</Text>
+      </View>
       <FlatList
         data={data}
         renderItem={({ item }) => {
@@ -45,12 +47,15 @@ export default HomeScreen;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
-    alignItems: "center",
+    justifyContent: "center",
   },
+
   title: {
     fontSize: 24,
     fontFamily: "DMSerif-Display",
     fontWeight: "bold",
     marginBottom: 12,
+    textAlign: "left",
+    paddingHorizontal: 8,
   },
 });

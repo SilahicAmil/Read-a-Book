@@ -1,5 +1,6 @@
 import HomeScreen from "./screens/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
+import { Text } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useFonts } from "expo-font";
 
@@ -18,7 +19,16 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            title: "Read(a)Book",
+            headerLeft: () => {
+              return <Text>LOGO</Text>;
+            },
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );

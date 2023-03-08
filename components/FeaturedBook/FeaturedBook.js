@@ -9,6 +9,7 @@ const FeaturedBook = ({ title, runtime }) => {
   return (
     <>
       <View style={styles.outerContainer}>
+        <Text style={styles.featured}>Featured Book</Text>
         <Pressable
           style={({ pressed }) => (pressed ? styles.pressed : null)}
           onPress={featuredBookHandler}
@@ -44,12 +45,14 @@ export default FeaturedBook;
 
 const styles = StyleSheet.create({
   outerContainer: {
-    width: "90%",
+    width: "100%",
+    padding: 8,
     height: 300,
     display: "inline",
     position: "relative",
     backgroundColor: "white",
-    marginTop: 32,
+    justifyContent: "center",
+    marginTop: 24,
     marginBottom: 32,
   },
   image: {
@@ -57,7 +60,11 @@ const styles = StyleSheet.create({
     height: "100%",
     borderRadius: 8,
   },
-
+  featured: {
+    fontSize: 24,
+    textAlign: "left",
+    fontFamily: "DMSerif-Display",
+  },
   descriptionContainer: {
     display: "flex",
     flexDirection: "row",
