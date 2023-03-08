@@ -31,6 +31,7 @@ export default function App() {
             tabBarIcon: () => {
               return <Entypo name="book" size={24} color="black" />;
             },
+            tabBarLabel: "Home",
           }}
         />
       </Tab.Navigator>
