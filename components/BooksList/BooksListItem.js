@@ -28,7 +28,7 @@ const BooksListItem = ({ title, description }) => {
               style={styles.image}
             />
             <View style={styles.textContainer}>
-              <Text>{title}</Text>
+              <Text style={styles.title}>{title}</Text>
               <Text style={styles.description}>
                 {description.slice(0, 175) + "..."}
               </Text>
@@ -64,8 +64,14 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     width: "70%",
   },
+  title: {
+    fontFamily: "DMSerif-Display",
+    fontSize: 18,
+    fontWeight: "normal",
+  },
   description: {
     fontSize: 12,
+    fontFamily: "Kantumury-Pro",
   },
   image: {
     width: 96,
