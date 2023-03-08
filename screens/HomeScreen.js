@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#fff",
     justifyContent: "center",
+    flex: 1,
   },
 
   title: {

@@ -44,8 +44,8 @@ export default BooksListItem;
 
 const styles = StyleSheet.create({
   container: {
-    display: "flex",
-    padding: 8,
+    marginBottom: 16,
+    borderRadius: 8,
   },
   innerContainer: {
     display: "flex",
@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FBF8F2",
     justifyContent: "center",
     alignItems: "center",
+    marginVertical: 6,
   },
   pressed: { opacity: 0.5 },
   textContainer: {
