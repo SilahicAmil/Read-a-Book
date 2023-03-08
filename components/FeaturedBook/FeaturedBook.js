@@ -1,21 +1,18 @@
-import * as Font from "expo-font";
-
-import {
-  Image,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 import { AntDesign } from "@expo/vector-icons";
 
 const FeaturedBook = ({ title, runtime }) => {
+  const featuredBookHandler = () => {
+    console.log("featured book");
+  };
   return (
     <>
       <View style={styles.outerContainer}>
-        <Pressable>
+        <Pressable
+          style={({ pressed }) => (pressed ? styles.pressed : null)}
+          onPress={featuredBookHandler}
+        >
           <Text style={styles.title}>Featured Book</Text>
           <Image
             source={{
@@ -50,9 +47,11 @@ const styles = StyleSheet.create({
   outerContainer: {
     width: "90%",
     height: 300,
-    paddingBottom: 72,
-    display: "flex",
+    display: "inline",
     position: "relative",
+    backgroundColor: "white",
+    marginTop: 32,
+    marginBottom: 110,
   },
   image: {
     width: "100%",
@@ -64,6 +63,7 @@ const styles = StyleSheet.create({
     textAlign: "left",
     fontWeight: "bold",
     fontFamily: "DMSerif-Display",
+    paddingBottom: 8,
   },
   descriptionContainer: {
     display: "flex",
@@ -74,11 +74,19 @@ const styles = StyleSheet.create({
     zIndex: 1,
     position: "absolute",
     opacity: 0.8,
-    bottom: -33,
+    bottom: -41,
     padding: 8,
     borderRadius: 8,
+
     alignItems: "center",
     justifyContent: "space-between",
+    shadowColor: "black",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.57,
+    shadowRadius: 4.65,
   },
 
   description: {
@@ -94,5 +102,8 @@ const styles = StyleSheet.create({
     fontFamily: "DMSerif-Display",
     fontWeight: "normal",
     fontSize: 18,
+  },
+  pressed: {
+    opacity: 0.8,
   },
 });

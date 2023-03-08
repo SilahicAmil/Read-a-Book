@@ -1,13 +1,4 @@
-import * as SplashScreen from "expo-splash-screen";
-
-import {
-  Button,
-  FlatList,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { FlatList, SafeAreaView, StyleSheet, Text } from "react-native";
 import { useEffect, useState } from "react";
 
 import BooksListItem from "./components/BooksList/BooksListItem";
@@ -61,16 +52,13 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center",
-    gap: 12,
   },
   title: {
     fontSize: 24,
+    fontFamily: "DMSerif-Display",
     fontWeight: "bold",
-    justifyContent: "space-around",
-    alignItems: "baseline",
+    marginBottom: 12,
   },
 });
