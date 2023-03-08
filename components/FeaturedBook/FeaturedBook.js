@@ -13,7 +13,6 @@ const FeaturedBook = ({ title, runtime }) => {
           style={({ pressed }) => (pressed ? styles.pressed : null)}
           onPress={featuredBookHandler}
         >
-          <Text style={styles.title}>Featured Book</Text>
           <Image
             source={{
               uri: "https://images.unsplash.com/photo-1529589941132-43606325dfb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80",
@@ -51,20 +50,14 @@ const styles = StyleSheet.create({
     position: "relative",
     backgroundColor: "white",
     marginTop: 32,
-    marginBottom: 110,
+    marginBottom: 32,
   },
   image: {
     width: "100%",
     height: "100%",
     borderRadius: 8,
   },
-  title: {
-    fontSize: 24,
-    textAlign: "left",
-    fontWeight: "bold",
-    fontFamily: "DMSerif-Display",
-    paddingBottom: 8,
-  },
+
   descriptionContainer: {
     display: "flex",
     flexDirection: "row",
@@ -74,9 +67,10 @@ const styles = StyleSheet.create({
     zIndex: 1,
     position: "absolute",
     opacity: 0.8,
-    bottom: -41,
+    bottom: 0,
     padding: 8,
-    borderRadius: 8,
+    borderBottomLeftRadius: 8,
+    borderBottomRightRadius: 8,
 
     alignItems: "center",
     justifyContent: "space-between",
