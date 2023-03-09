@@ -1,6 +1,7 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
 
 import BooksCard from "../components/AllBooks/BooksCard";
+import FilteredChips from "../components/AllBooks/FilteredChips";
 import useFetchData from "../hooks/useFetchData";
 
 const AllBooksScreen = ({ route, navigation }) => {
@@ -29,11 +30,7 @@ const AllBooksScreen = ({ route, navigation }) => {
   return (
     <>
       <View style={styles.container}>
-        <View>
-          <Text>0-5 Hours</Text>
-          <Text>6-15 Hours</Text>
-          <Text>16+ Hours</Text>
-        </View>
+        <FilteredChips />
         <FlatList
           data={allData}
           renderItem={renderBooksCard}

@@ -1,7 +1,5 @@
+import { Button, Card } from "@rneui/themed";
 import { StyleSheet, Text, View } from "react-native";
-
-import { Button } from "@rneui/themed";
-import { Card } from "@rneui/base";
 
 const BooksDetails = ({ title }) => {
   return (

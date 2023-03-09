@@ -1,0 +1,54 @@
+import { StyleSheet, View } from "react-native";
+
+import { Chip } from "@rneui/themed";
+
+const FilteredChips = ({}) => {
+  return (
+    <>
+      <View style={styles.rootContainer}>
+        <Chip
+          title="0-5 hrs"
+          type="outline"
+          icon={{
+            name: "clock-o",
+            type: "font-awesome",
+            size: 20,
+            color: "black",
+          }}
+        />
+        <Chip
+          title="6-15 hrs"
+          type="outline"
+          icon={{
+            name: "clock-o",
+            type: "font-awesome",
+            size: 20,
+            color: "black",
+          }}
+        />
+        <Chip
+          title="15+ hrs"
+          type="outline"
+          icon={{
+            name: "clock-o",
+            type: "font-awesome",
+            size: 20,
+            color: "black",
+          }}
+        />
+      </View>
+    </>
+  );
+};
+
+export default FilteredChips;
+
+const styles = StyleSheet.create({
+  rootContainer: {
+    marginTop: 8,
+    display: "flex",
+    flexDirection: "row",
+    width: "100%",
+    justifyContent: "space-evenly",
+  },
+});

@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   outerContainer: {
     width: "100%",
     padding: 8,
-    height: 300,
+    height: 250,
     position: "relative",
     backgroundColor: "#fff",
     justifyContent: "center",
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     width: "100%",
-    height: "20%",
+
     backgroundColor: "#ccc",
     zIndex: 1,
     position: "absolute",
