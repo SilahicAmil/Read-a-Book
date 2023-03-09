@@ -33,9 +33,7 @@ export default function App() {
               />
             );
           },
-          headerStyle: {
-            backgroundColor: "#f4511e",
-          },
+
           headerTitleAlign: "left",
           headerRight: () => {
             return (
@@ -57,12 +55,22 @@ export default function App() {
             tabBarLabelPosition: "below-icon",
 
             tabBarIcon: () => {
-              return <Entypo name="book" size={24} color="black" />;
+              return <Entypo name="home" size={24} color="black" />;
             },
             tabBarLabel: "Home",
           }}
         />
-        <Tab.Screen name="AllBooks" component={AllBooksScreen} />
+        <Tab.Screen
+          name="AllBooks"
+          component={AllBooksScreen}
+          options={{
+            title: "Explore Books",
+            headerTitleAlign: "center",
+            tabBarIcon: () => {
+              return <Entypo name="documents" size={24} color="black" />;
+            },
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
