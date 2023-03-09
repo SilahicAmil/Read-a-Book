@@ -26,7 +26,7 @@ export default function App() {
   const HomeTabs = () => {
     return (
       <Tab.Navigator
-        initialRouteName="Home"
+        initialRouteName="TabHome"
         screenOptions={{
           headerLeft: () => {
             return (
@@ -53,7 +53,7 @@ export default function App() {
         }}
       >
         <Tab.Screen
-          name="Home"
+          name="TabHome"
           component={HomeScreen}
           options={{
             title: "Read(a)Book",
