@@ -1,31 +1,36 @@
-import { Button, Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Button, Card } from "@rneui/themed";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 const BooksCard = ({ imageUrl, title, authorFirst, authorLast, onPress }) => {
   return (
     <>
-      <Pressable
-        style={({ pressed }) => (pressed ? styles.pressed : null)}
-        onPress={onPress}
-      >
-        <View style={styles.rootContainer}>
-          <View style={styles.innerContainer}>
-            <View style={styles.image}>
-              <Image
-                source={{
-                  uri: "https://images.unsplash.com/photo-1529589941132-43606325dfb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80",
-                }}
-                style={styles.image}
-              />
-              <View style={styles.infoContainer}>
-                <Text style={styles.title}>{title}</Text>
-                <Text style={styles.author}>
-                  By: {authorFirst}&nbsp;{authorLast}
-                </Text>
+      <Card containerStyle={styles.rootContainer}>
+        <Pressable
+          style={({ pressed }) => (pressed ? styles.pressed : null)}
+          onPress={onPress}
+        >
+          <View style={styles.image}>
+            <Card.Image
+              source={{
+                uri: "https://images.unsplash.com/photo-1529589941132-43606325dfb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80",
+              }}
+              style={styles.image}
+            />
+            <View style={styles.infoContainer}>
+              <Card.Title style={styles.title}>{title}</Card.Title>
+              <Text style={styles.author}>
+                By: {authorFirst}&nbsp;{authorLast}
+              </Text>
+            </View>
+
+            <View>
+              <View style={styles.actions}>
+                <Button title="View More" onPress={onPress} color="#2F2F2F" />
               </View>
             </View>
           </View>
-        </View>
-      </Pressable>
+        </Pressable>
+      </Card>
     </>
   );
 };
@@ -34,38 +39,29 @@ export default BooksCard;
 
 const styles = StyleSheet.create({
   rootContainer: {
-    width: 180,
-    height: 300,
     backgroundColor: "#F5EFE1",
-    display: "flex",
     borderRadius: 8,
-    margin: 6,
-    marginLeft: 2,
+    width: "42%",
   },
-  innerContainer: {
-    display: "flex",
-    padding: 6,
+  actions: {
+    marginTop: 8,
+    backgroundColor: "white",
+  },
 
-    alignItems: "center",
-  },
   image: {
-    width: 150,
-    height: 200,
+    width: "100%",
     borderRadius: 8,
-  },
-  infoContainer: {
-    display: "flex",
-    flexDirection: "column",
   },
   title: {
     paddingTop: 8,
     textAlign: "left",
+    marginBottom: 2,
     fontSize: 18,
     fontFamily: "DMSerif-Display",
-    width: 165,
   },
   author: {
-    fontSize: 12,
+    fontSize: 16,
+    textAlign: "left",
     fontFamily: "Kantumury-Pro",
     paddingTop: 8,
   },
