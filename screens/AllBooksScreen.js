@@ -10,6 +10,22 @@ const AllBooksScreen = ({ route, navigation }) => {
     return <Text>Loading...</Text>;
   }
 
+  const renderBooksCard = (itemData) => {
+    const bookPressedHandler = () => {
+      navigation.navigate("BooksDetails", {
+        ...itemData.item,
+      });
+    };
+    return (
+      <BooksCard
+        title={itemData.item.books_title}
+        authorFirst={itemData.item.books_authors_first_name}
+        authorLast={itemData.item.books_authors_last_name}
+        onPress={bookPressedHandler}
+      />
+    );
+  };
+
   return (
     <>
       <View style={styles.container}>
@@ -20,15 +36,7 @@ const AllBooksScreen = ({ route, navigation }) => {
         </View>
         <FlatList
           data={allData}
-          renderItem={({ item }) => {
-            return (
-              <BooksCard
-                title={item.books_title}
-                authorFirst={item.books_authors_first_name}
-                authorLast={item.books_authors_last_name}
-              />
-            );
-          }}
+          renderItem={renderBooksCard}
           numColumns={2}
           keyExtractor={(item) => item.books_id}
         />

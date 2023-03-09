@@ -1,7 +1,9 @@
+import { Entypo, Feather } from "@expo/vector-icons";
+
 import AllBooksScreen from "./screens/AllBooksScreen";
 import BooksDetailsScreen from "./screens/BooksDetailsScreen";
-import { Entypo } from "@expo/vector-icons";
 import HomeScreen from "./screens/HomeScreen";
+import { Ionicons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -28,7 +30,7 @@ export default function App() {
         screenOptions={{
           headerLeft: () => {
             return (
-              <Entypo
+              <Ionicons
                 name="book"
                 size={24}
                 color="black"
@@ -40,7 +42,7 @@ export default function App() {
           headerTitleAlign: "left",
           headerRight: () => {
             return (
-              <Entypo
+              <Ionicons
                 name="menu"
                 size={24}
                 color="black"
@@ -58,7 +60,7 @@ export default function App() {
             tabBarLabelPosition: "below-icon",
 
             tabBarIcon: () => {
-              return <Entypo name="home" size={24} color="black" />;
+              return <Ionicons name="home" size={24} color="black" />;
             },
             tabBarLabel: "Home",
           }}
@@ -70,7 +72,7 @@ export default function App() {
             title: "Explore Books",
             headerTitleAlign: "center",
             tabBarIcon: () => {
-              return <Entypo name="documents" size={24} color="black" />;
+              return <Ionicons name="book-outline" size={24} color="black" />;
             },
           }}
         />
@@ -81,8 +83,25 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeTabs} />
-        <Stack.Screen name="BooksDetails" component={BooksDetailsScreen} />
+        <Stack.Screen
+          name="Home"
+          component={HomeTabs}
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="BooksDetails"
+          component={BooksDetailsScreen}
+          options={{
+            title: "Book Info",
+            headerRight: () => {
+              return (
+                <Ionicons name="bookmark-outline" size={24} color="black" />
+              );
+            },
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

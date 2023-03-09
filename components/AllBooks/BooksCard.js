@@ -1,9 +1,12 @@
 import { Button, Image, Pressable, StyleSheet, Text, View } from "react-native";
 
-const BooksCard = ({ imageUrl, title, authorFirst, authorLast }) => {
+const BooksCard = ({ imageUrl, title, authorFirst, authorLast, onPress }) => {
   return (
     <>
-      <Pressable style={({ pressed }) => (pressed ? styles.pressed : null)}>
+      <Pressable
+        style={({ pressed }) => (pressed ? styles.pressed : null)}
+        onPress={onPress}
+      >
         <View style={styles.rootContainer}>
           <View style={styles.innerContainer}>
             <View style={styles.image}>
