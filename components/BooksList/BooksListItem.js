@@ -7,16 +7,12 @@ import {
   View,
 } from "react-native";
 
-const BooksListItem = ({ title, description }) => {
-  const itemPressedHandler = () => {
-    console.log("pressed");
-  };
-
+const BooksListItem = ({ title, description, onPress }) => {
   return (
     <>
       <ScrollView style={styles.container}>
         <Pressable
-          onPress={itemPressedHandler}
+          onPress={onPress}
           style={({ pressed }) => (pressed ? styles.pressed : null)}
         >
           <View style={styles.innerContainer}>

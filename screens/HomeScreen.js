@@ -6,7 +6,7 @@ import FeaturedBook from "../components/FeaturedBook/FeaturedBook";
 import { StatusBar } from "expo-status-bar";
 import useFetchData from "../hooks/useFetchData";
 
-const HomeScreen = () => {
+const HomeScreen = ({ route, navigation }) => {
   const { sampleData, isLoading, isError } = useFetchData();
 
   if (isLoading === true) {
@@ -19,6 +19,22 @@ const HomeScreen = () => {
     return <Text>Error!</Text>;
   }
 
+  const renderBookListItem = (itemData) => {
+    const bookPressedHandler = () => {
+      navigation.navigate("BooksDetails", {
+        ...itemData.item,
+      });
+    };
+
+    return (
+      <BooksListItem
+        title={itemData.item.books_title}
+        description={itemData.item.books_description}
+        onPress={bookPressedHandler}
+      />
+    );
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
@@ -28,14 +44,7 @@ const HomeScreen = () => {
       </View>
       <FlatList
         data={sampleData}
-        renderItem={({ item }) => {
-          return (
-            <BooksListItem
-              title={item.books_title}
-              description={item.books_description}
-            />
-          );
-        }}
+        renderItem={renderBookListItem}
         keyExtractor={(item) => item.books_id}
       />
     </SafeAreaView>

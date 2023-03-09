@@ -1,12 +1,15 @@
 import AllBooksScreen from "./screens/AllBooksScreen";
+import BooksDetailsScreen from "./screens/BooksDetailsScreen";
 import { Entypo } from "@expo/vector-icons";
 import HomeScreen from "./screens/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useFonts } from "expo-font";
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,8 +21,8 @@ export default function App() {
     return;
   }
 
-  return (
-    <NavigationContainer>
+  const HomeTabs = () => {
+    return (
       <Tab.Navigator
         initialRouteName="Home"
         screenOptions={{
@@ -72,6 +75,15 @@ export default function App() {
           }}
         />
       </Tab.Navigator>
+    );
+  };
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeTabs} />
+        <Stack.Screen name="BooksDetails" component={BooksDetailsScreen} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

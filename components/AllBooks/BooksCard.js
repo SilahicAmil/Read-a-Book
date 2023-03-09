@@ -31,33 +31,35 @@ export default BooksCard;
 
 const styles = StyleSheet.create({
   rootContainer: {
-    width: 200,
-    height: 400,
-    margin: 8,
+    width: 180,
+    height: 300,
     backgroundColor: "#F5EFE1",
     display: "flex",
     borderRadius: 8,
+    margin: 6,
+    marginLeft: 2,
   },
   innerContainer: {
     display: "flex",
-    padding: 4,
+    padding: 6,
+
+    alignItems: "center",
   },
   image: {
-    width: "100%",
-    height: "90%",
+    width: 150,
+    height: 200,
     borderRadius: 8,
   },
   infoContainer: {
     display: "flex",
     flexDirection: "column",
-    width: "100%",
   },
   title: {
     paddingTop: 8,
     textAlign: "left",
     fontSize: 18,
     fontFamily: "DMSerif-Display",
-    width: "100%",
+    width: 165,
   },
   author: {
     fontSize: 12,
