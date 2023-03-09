@@ -4,10 +4,10 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import BooksListItem from "../components/BooksList/BooksListItem";
 import FeaturedBook from "../components/FeaturedBook/FeaturedBook";
 import { StatusBar } from "expo-status-bar";
-import useFetch from "../hooks/useFetchData";
+import useFetchData from "../hooks/useFetchData";
 
 const HomeScreen = () => {
-  const { sampleData, isLoading, isError } = useFetch();
+  const { sampleData, isLoading, isError } = useFetchData();
 
   if (isLoading === true) {
     // can use setTimeout so it loads for like 3 seconds minimum

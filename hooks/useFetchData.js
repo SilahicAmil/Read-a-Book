@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 
 import { supabase } from "../lib/supabase";
 
-const useFetch = () => {
+const useFetchData = () => {
   const [sampleData, setSampleData] = useState();
   const [allData, setAllData] = useState();
   const [isLoading, setIsLoading] = useState(false);
@@ -29,4 +29,4 @@ const useFetch = () => {
   return { sampleData, allData, isLoading, isError };
 };
 
-export default useFetch;
+export default useFetchData;

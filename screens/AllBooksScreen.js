@@ -1,9 +1,9 @@
 import { FlatList, Text, View } from "react-native";
 
-import useFetch from "../hooks/useFetchData";
+import useFetchData from "../hooks/useFetchData";
 
 const AllBooksScreen = ({ route, navigation }) => {
-  const { allData, isLoading, isError } = useFetch();
+  const { allData, isLoading, isError } = useFetchData();
 
   console.log("route", route);
   console.log("nav", navigation);
