@@ -1,3 +1,4 @@
+import AllBooksScreen from "./screens/AllBooksScreen";
 import { Entypo } from "@expo/vector-icons";
 import HomeScreen from "./screens/HomeScreen";
 import { NavigationContainer } from "@react-navigation/native";
@@ -61,6 +62,7 @@ export default function App() {
             tabBarLabel: "Home",
           }}
         />
+        <Tab.Screen name="AllBooks" component={AllBooksScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -1,23 +1,23 @@
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from "react-native";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 import BooksListItem from "../components/BooksList/BooksListItem";
 import FeaturedBook from "../components/FeaturedBook/FeaturedBook";
 import { StatusBar } from "expo-status-bar";
-import { supabase } from "../lib/supabase";
+import useFetch from "../hooks/useFetchData";
 
 const HomeScreen = () => {
-  const [data, setData] = useState([]);
+  const { sampleData, isLoading, isError } = useFetch();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const { data, error } = await supabase.from("allbooks").select();
-      console.log("loaded");
+  if (isLoading === true) {
+    // can use setTimeout so it loads for like 3 seconds minimum
+    return <Text>Loading...</Text>;
+  }
 
-      setData(data.slice(0, 10));
-    };
-    fetchData();
-  }, [setData]);
+  if (isError === true) {
+    // can use setTimeout eventually to reload the whole app after lik 3-4 seconds
+    return <Text>Error!</Text>;
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -27,7 +27,7 @@ const HomeScreen = () => {
         <Text style={styles.title}>Popular Books</Text>
       </View>
       <FlatList
-        data={data}
+        data={sampleData}
         renderItem={({ item }) => {
           return (
             <BooksListItem
