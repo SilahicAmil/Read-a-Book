@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
   container: {
     marginBottom: 16,
     borderRadius: 8,
+    backgroundColor: "#FFF",
   },
   innerContainer: {
     display: "flex",
@@ -55,6 +56,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginVertical: 6,
+    shadowColor: "black",
+    shadowOffset: {
+      width: 4,
+      height: 3,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 8,
   },
   pressed: { opacity: 0.5 },
   textContainer: {

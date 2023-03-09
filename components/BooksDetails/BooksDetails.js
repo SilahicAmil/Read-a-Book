@@ -1,5 +1,5 @@
 import { Button, Card } from "@rneui/themed";
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 const BooksDetails = ({
   title,
@@ -12,33 +12,36 @@ const BooksDetails = ({
 }) => {
   return (
     <>
-      <View>
+      <ScrollView style={styles.rootContainer}>
         <Card.Image
           source={{
             uri: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
           }}
           style={styles.image}
         />
+
         <View>
           <Text>{title}</Text>
           <Text>
             By {authorFirst}&nbsp;{authorLast}
           </Text>
         </View>
+
         <View style={styles.basicInfo}>
-          <Card>
-            <Text>Realeased</Text>
+          <Card containerStyle={styles.card}>
+            <Text style={styles.cardText}>Realeased</Text>
             <Text>{released}</Text>
           </Card>
-          <Card>
-            <Text>Sections</Text>
+          <Card containerStyle={styles.card}>
+            <Text style={styles.cardText}>Sections</Text>
             <Text>{sections}</Text>
           </Card>
-          <Card>
-            <Text>Total Runtime</Text>
+          <Card containerStyle={styles.card}>
+            <Text style={styles.cardText}>Runtime</Text>
             <Text>{runtime} HRs</Text>
           </Card>
         </View>
+
         <View>
           <Text>Description</Text>
           <Text>{description}</Text>
@@ -47,7 +50,7 @@ const BooksDetails = ({
         <View style={styles.actions}>
           <Button title="Play Audio" type="solid" />
         </View>
-      </View>
+      </ScrollView>
     </>
   );
 };
@@ -55,7 +58,13 @@ const BooksDetails = ({
 export default BooksDetails;
 
 const styles = StyleSheet.create({
+  rootContainer: {
+    backgroundColor: "#FBF8F2",
+    height: "100%",
+    width: "100%",
+  },
   image: {
+    width: "95%",
     margin: 8,
     borderRadius: 8,
     height: 200,
@@ -63,10 +72,18 @@ const styles = StyleSheet.create({
   basicInfo: {
     display: "flex",
     flexDirection: "row",
-    width: 300,
+    alignItems: "center",
+  },
+  card: {
+    borderColor: "#E3D4B5",
+    borderRadius: 8,
+  },
+  cardText: {
+    textAlign: "center",
   },
   actions: {
     display: "flex",
     flexDirection: "row",
+    zIndex: 1,
   },
 });

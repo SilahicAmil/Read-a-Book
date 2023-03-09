@@ -1,4 +1,4 @@
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 import BooksDetails from "../components/BooksDetails/BooksDetails";
 
@@ -16,7 +16,7 @@ const BooksDetailsScreen = ({ route }) => {
   console.log(books_id);
   return (
     <>
-      <View>
+      <View style={styles.rootContainer}>
         <BooksDetails
           title={books_title}
           authorFirst={books_authors_first_name}
@@ -32,3 +32,9 @@ const BooksDetailsScreen = ({ route }) => {
 };
 
 export default BooksDetailsScreen;
+
+const styles = StyleSheet.create({
+  rootContainer: {
+    backgroundColor: "black",
+  },
+});
