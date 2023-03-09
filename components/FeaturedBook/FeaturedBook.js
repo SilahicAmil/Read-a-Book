@@ -26,13 +26,14 @@ const FeaturedBook = ({ title, runtime }) => {
               <Text style={styles.time}>
                 <AntDesign
                   name="playcircleo"
-                  size={16}
+                  size={15}
                   color="black"
                   style={styles.icon}
                 />
                 &nbsp;
-                {runtime}
+                {runtime}hr
               </Text>
+              <Text style={styles.listen}>Listen</Text>
             </View>
           </View>
         </Pressable>
@@ -99,11 +100,19 @@ const styles = StyleSheet.create({
   timeContainer: {
     justifyContent: "center",
     alignItems: "center",
+    display: "flex",
+    flexDirection: "row",
   },
   time: {
-    fontFamily: "DMSerif-Display",
+    fontFamily: "Kantumury-Pro",
     fontWeight: "normal",
-    fontSize: 18,
+    fontSize: 15,
+    marginRight: 4,
+  },
+  listen: {
+    marginLeft: 4,
+    fontSize: 15,
+    fontFamily: "Kantumury-Pro",
   },
   pressed: {
     opacity: 0.8,

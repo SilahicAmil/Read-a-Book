@@ -17,7 +17,15 @@ const BooksDetailsScreen = ({ route }) => {
   return (
     <>
       <View>
-        <BooksDetails />
+        <BooksDetails
+          title={books_title}
+          authorFirst={books_authors_first_name}
+          authorLast={books_authors_last_name}
+          released={books_copyright_year}
+          sections={books_num_sections}
+          runtime={books_totaltime}
+          description={books_description}
+        />
       </View>
     </>
   );

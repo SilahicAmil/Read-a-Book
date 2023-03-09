@@ -1,7 +1,15 @@
 import { Button, Card } from "@rneui/themed";
 import { StyleSheet, Text, View } from "react-native";
 
-const BooksDetails = ({ title }) => {
+const BooksDetails = ({
+  title,
+  authorFirst,
+  authorLast,
+  released,
+  sections,
+  runtime,
+  description,
+}) => {
   return (
     <>
       <View>
@@ -12,29 +20,32 @@ const BooksDetails = ({ title }) => {
           style={styles.image}
         />
         <View>
-          <Text>The Homeric Hymns</Text>
-          <Text>By Michael Curdden</Text>
+          <Text>{title}</Text>
+          <Text>
+            By {authorFirst}&nbsp;{authorLast}
+          </Text>
         </View>
         <View style={styles.basicInfo}>
           <Card>
             <Text>Realeased</Text>
-            <Text>2021</Text>
+            <Text>{released}</Text>
           </Card>
           <Card>
             <Text>Sections</Text>
-            <Text>32</Text>
+            <Text>{sections}</Text>
           </Card>
           <Card>
             <Text>Total Runtime</Text>
-            <Text>49:08:35 HRs</Text>
+            <Text>{runtime} HRs</Text>
           </Card>
         </View>
         <View>
           <Text>Description</Text>
+          <Text>{description}</Text>
         </View>
 
         <View style={styles.actions}>
-          <Button title="Play Audio" type="solud" />
+          <Button title="Play Audio" type="solid" />
         </View>
       </View>
     </>
