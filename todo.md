@@ -8,6 +8,7 @@
 -- Add Ability to "subscribe" in the app
 -- Add Auth
 -- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs)
+-- Add Audiobook files to supabase storage and link to DB COL
 
 -- Find Logo for APP
 -- Update coloring across app
