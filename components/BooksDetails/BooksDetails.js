@@ -1,5 +1,7 @@
-import { Button, Card } from "@rneui/themed";
+import { Button, Card, Icon } from "@rneui/themed";
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+
+import { Ionicons } from "@expo/vector-icons";
 
 const BooksDetails = ({
   title,
@@ -48,8 +50,41 @@ const BooksDetails = ({
           </View>
         </ScrollView>
         <View style={styles.actions}>
-          <Button title="Play Audio" type="solid" />
-          <Button title="Play Audio" type="solid" />
+          <Button
+            title="Purchase Book"
+            type="solid"
+            icon={<Ionicons name="book" size={24} color="black" />}
+            titleStyle={{
+              fontSize: 16,
+              fontFamily: "Kantumury-Pro",
+              color: "#2F2F2F",
+              marginLeft: 4,
+            }}
+            buttonStyle={{
+              backgroundColor: "#BFA054",
+              height: "100%",
+              borderRadius: 6,
+            }}
+            accessibilityLabel="Purchase selected Audiobook"
+          />
+          <Button
+            accessibilityLabel="Play Audio for the Audiobook"
+            title="Play Audio"
+            icon={
+              <Ionicons name="play-circle-outline" size={24} color="white" />
+            }
+            titleStyle={{
+              fontSize: 16,
+              fontFamily: "Kantumury-Pro",
+              marginLeft: 4,
+              color: "white",
+            }}
+            buttonStyle={{
+              backgroundColor: "#2F2F2F",
+              height: "100%",
+              borderRadius: 6,
+            }}
+          />
         </View>
       </View>
     </>
@@ -61,6 +96,7 @@ export default BooksDetails;
 const styles = StyleSheet.create({
   rootContainer: {
     backgroundColor: "white",
+
     height: "100%",
     width: "100%",
     flex: 1,
@@ -118,14 +154,17 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   descriptionText: {
-    letterSpacing: 1.2,
+    letterSpacing: 1.1,
     justifyContent: "center",
+    marginBottom: 16,
   },
   actions: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "center",
-    gap: 12,
-    marginBottom: 32,
+    height: 48,
+    justifyContent: "space-around",
+    alignItems: "center",
+    marginBottom: 48,
+    marginTop: 16,
   },
 });
