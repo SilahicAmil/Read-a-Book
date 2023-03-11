@@ -102,7 +102,6 @@ const styles = StyleSheet.create({
     marginTop: -24,
     height: 64,
     justifyContent: "center",
-    // alignItems: "center",
   },
   innerRatingsContainer: {
     justifyContent: "center",

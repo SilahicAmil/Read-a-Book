@@ -57,6 +57,6 @@ export default BooksDetailsScreen;
 
 const styles = StyleSheet.create({
   rootContainer: {
-    backgroundColor: "black",
+    flex: 1,
   },
 });
