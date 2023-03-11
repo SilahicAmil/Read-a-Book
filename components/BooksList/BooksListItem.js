@@ -110,28 +110,28 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   ratingsText: {
-    fontSize: 14,
+    fontSize: 12,
     marginLeft: 12,
     fontFamily: "Kantumury-Pro",
   },
   title: {
     fontFamily: "DMSerif-Display",
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: "bold",
   },
 
   author: {
     fontSize: 12,
     fontFamily: "Kantumury-Pro",
-    fontWeight: "100",
+
     marginBottom: 6,
   },
   description: {
     fontSize: 10,
   },
   image: {
-    width: 72,
-    height: 72,
+    width: 96,
+    height: 96,
     borderRadius: 4,
   },
 });
