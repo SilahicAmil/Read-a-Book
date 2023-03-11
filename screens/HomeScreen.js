@@ -1,12 +1,11 @@
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from "react-native";
-import { useEffect, useLayoutEffect, useState } from "react";
 
 import BooksListItem from "../components/BooksList/BooksListItem";
 import FeaturedBook from "../components/FeaturedBook/FeaturedBook";
 import { StatusBar } from "expo-status-bar";
 import useFetchData from "../hooks/useFetchData";
 
-const HomeScreen = ({ route, navigation }) => {
+const HomeScreen = ({ navigation }) => {
   const { sampleData, isLoading, isError } = useFetchData();
 
   if (isLoading === true) {
