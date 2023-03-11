@@ -60,9 +60,16 @@ export default function App() {
             title: "Read(a)Book",
             tabBarLabelPosition: "below-icon",
 
-            tabBarIcon: () => {
-              return <Ionicons name="home-outline" size={24} color="black" />;
+            tabBarIcon: ({ focused }) => {
+              return (
+                <Ionicons
+                  name={focused ? "home" : "home-outline"}
+                  size={24}
+                  color="black"
+                />
+              );
             },
+            tabBarActiveTintColor: "black",
             tabBarLabel: "Home",
           }}
         />
@@ -72,8 +79,14 @@ export default function App() {
           options={{
             title: "Explore Books",
             headerTitleAlign: "center",
-            tabBarIcon: () => {
-              return <Ionicons name="book-outline" size={24} color="black" />;
+            tabBarIcon: ({ focused }) => {
+              return (
+                <Ionicons
+                  name={focused ? "book" : "book-outline"}
+                  size={24}
+                  color="black"
+                />
+              );
             },
           }}
         />
@@ -81,8 +94,14 @@ export default function App() {
           name="UserProfile"
           component={UserProfileScreen}
           options={{
-            tabBarIcon: () => {
-              return <Ionicons name="person-outline" size={24} color="black" />;
+            tabBarIcon: ({ focused }) => {
+              return (
+                <Ionicons
+                  name={focused ? "person" : "person-outline"}
+                  size={24}
+                  color="black"
+                />
+              );
             },
           }}
         />

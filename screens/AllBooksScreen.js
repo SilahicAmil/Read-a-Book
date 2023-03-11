@@ -5,8 +5,12 @@ import FilteredChips from "../components/AllBooks/FilteredChips";
 import LoadingItem from "../components/UI/LoadingItem";
 import useFetchData from "../hooks/useFetchData";
 
-const AllBooksScreen = ({ route, navigation }) => {
+const AllBooksScreen = ({ navigation }) => {
   const { allData, isLoading, isError } = useFetchData();
+
+  if (isError === true) {
+    return <Text>Error...</Text>;
+  }
 
   if (isLoading === true) {
     return <LoadingItem />;
