@@ -1,21 +1,29 @@
-import { FlatList, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import {
+  ActivityIndicator,
+  FlatList,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 
 import BooksListItem from "../components/BooksList/BooksListItem";
 import FeaturedBook from "../components/FeaturedBook/FeaturedBook";
+import LoadingItem from "../components/UI/LoadingItem";
 import { StatusBar } from "expo-status-bar";
 import useFetchData from "../hooks/useFetchData";
 
 const HomeScreen = ({ navigation }) => {
   const { sampleData, isLoading, isError } = useFetchData();
 
-  if (isLoading === true) {
-    // can use setTimeout so it loads for like 3 seconds minimum
-    return <Text>Loading...</Text>;
-  }
-
   if (isError === true) {
     // can use setTimeout eventually to reload the whole app after lik 3-4 seconds
     return <Text>Error!</Text>;
+  }
+
+  if (isLoading === true) {
+    // return <ActivityIndicator size="large" color="#0000ff" />;
+    return <LoadingItem />;
   }
 
   const renderBookListItem = (itemData) => {

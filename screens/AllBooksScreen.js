@@ -2,13 +2,14 @@ import { FlatList, StyleSheet, Text, View } from "react-native";
 
 import BooksCard from "../components/AllBooks/BooksCard";
 import FilteredChips from "../components/AllBooks/FilteredChips";
+import LoadingItem from "../components/UI/LoadingItem";
 import useFetchData from "../hooks/useFetchData";
 
 const AllBooksScreen = ({ route, navigation }) => {
   const { allData, isLoading, isError } = useFetchData();
 
   if (isLoading === true) {
-    return <Text>Loading...</Text>;
+    return <LoadingItem />;
   }
 
   const renderBooksCard = (itemData) => {
