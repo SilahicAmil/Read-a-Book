@@ -6,6 +6,7 @@ import HomeScreen from "./screens/HomeScreen";
 import { Ionicons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet } from "react-native";
+import UserProfileScreen from "./screens/UserProfileScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useFonts } from "expo-font";
@@ -60,7 +61,7 @@ export default function App() {
             tabBarLabelPosition: "below-icon",
 
             tabBarIcon: () => {
-              return <Ionicons name="home" size={24} color="black" />;
+              return <Ionicons name="home-outline" size={24} color="black" />;
             },
             tabBarLabel: "Home",
           }}
@@ -73,6 +74,15 @@ export default function App() {
             headerTitleAlign: "center",
             tabBarIcon: () => {
               return <Ionicons name="book-outline" size={24} color="black" />;
+            },
+          }}
+        />
+        <Tab.Screen
+          name="UserProfile"
+          component={UserProfileScreen}
+          options={{
+            tabBarIcon: () => {
+              return <Ionicons name="person-outline" size={24} color="black" />;
             },
           }}
         />
@@ -97,7 +107,7 @@ export default function App() {
             title: "Book Info",
             headerRight: () => {
               return (
-                <Ionicons name="bookmark-outline" size={24} color="black" />
+                <Ionicons name="bookmarks-outline" size={24} color="black" />
               );
             },
           }}
