@@ -15,6 +15,10 @@ const BooksDetailsScreen = ({ route }) => {
           sortBy: { column: "name", order: "asc" },
         });
 
+      if (error) {
+        return;
+      }
+
       setAudiobookData(data);
     };
 
@@ -31,7 +35,6 @@ const BooksDetailsScreen = ({ route }) => {
     books_totaltime,
     books_description,
   } = route.params;
-  console.log(books_id);
 
   return (
     <>
@@ -45,9 +48,6 @@ const BooksDetailsScreen = ({ route }) => {
           runtime={books_totaltime}
           description={books_description}
         />
-        {/* {audiobookData.map((item) => {
-          return <Text key={item.id}>{item.name}</Text>;
-        })} */}
       </View>
     </>
   );
