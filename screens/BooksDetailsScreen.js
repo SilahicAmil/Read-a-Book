@@ -21,13 +21,6 @@ const BooksDetailsScreen = ({ route }) => {
     getAudioBooksData();
   }, []);
 
-  useEffect(() => {
-    const { data } = supabase.storage
-      .from("audiobooks")
-      .getPublicUrl(`Foolish Dictionary/${audiobookData[0].name}`);
-    console.log(data);
-  }, []);
-
   const {
     books_id,
     books_title,
@@ -42,9 +35,6 @@ const BooksDetailsScreen = ({ route }) => {
 
   return (
     <>
-      {audiobookData.map((item) => {
-        return <Text key={item.id}>{item.name}</Text>;
-      })}
       <View style={styles.rootContainer}>
         <BooksDetails
           title={books_title}
@@ -55,6 +45,9 @@ const BooksDetailsScreen = ({ route }) => {
           runtime={books_totaltime}
           description={books_description}
         />
+        {/* {audiobookData.map((item) => {
+          return <Text key={item.id}>{item.name}</Text>;
+        })} */}
       </View>
     </>
   );
