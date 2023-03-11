@@ -36,6 +36,8 @@ const HomeScreen = ({ navigation }) => {
     return (
       <BooksListItem
         title={itemData.item.books_title}
+        authorFirst={itemData.item.books_authors_first_name}
+        authorLast={itemData.item.books_authors_last_name}
         description={itemData.item.books_description}
         onPress={bookPressedHandler}
       />

@@ -7,7 +7,15 @@ import {
   View,
 } from "react-native";
 
-const BooksListItem = ({ title, description, onPress }) => {
+import { AirbnbRating } from "@rneui/themed";
+
+const BooksListItem = ({
+  title,
+  authorFirst,
+  authorLast,
+  onPress,
+  description,
+}) => {
   return (
     <>
       <ScrollView style={styles.container}>
@@ -26,9 +34,28 @@ const BooksListItem = ({ title, description, onPress }) => {
 
             <View style={styles.textContainer}>
               <Text style={styles.title}>{title}</Text>
-              <Text style={styles.description}>
-                {description.slice(0, 175) + "..."}
+              <Text style={styles.author}>
+                {authorFirst} &nbsp;
+                {authorLast}
               </Text>
+              <Text style={styles.description}>
+                {description.slice(0, 120)}...
+              </Text>
+
+              <View style={styles.ratingsContainer}>
+                <Text>
+                  <AirbnbRating
+                    isDisabled={true}
+                    reviews={false}
+                    count={5}
+                    defaultRating={4}
+                    size={15}
+                  />
+                  <View style={styles.innerRatingsContainer}>
+                    <Text style={styles.ratingsText}>40 Ratings</Text>
+                  </View>
+                </Text>
+              </View>
             </View>
           </View>
         </Pressable>
@@ -62,7 +89,7 @@ const styles = StyleSheet.create({
       height: 3,
     },
     shadowOpacity: 0.3,
-    shadowRadius: 5,
+    shadowRadius: 2,
     elevation: 8,
   },
   pressed: { opacity: 0.5 },
@@ -71,18 +98,40 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     width: "70%",
   },
-  title: {
-    fontFamily: "DMSerif-Display",
-    fontSize: 18,
-    fontWeight: "normal",
+  ratingsContainer: {
+    marginTop: -24,
+    height: 64,
+    justifyContent: "center",
+    // alignItems: "center",
   },
-  description: {
-    fontSize: 12,
+  innerRatingsContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+  },
+  ratingsText: {
+    fontSize: 14,
+    marginLeft: 12,
     fontFamily: "Kantumury-Pro",
   },
+  title: {
+    fontFamily: "DMSerif-Display",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+
+  author: {
+    fontSize: 12,
+    fontFamily: "Kantumury-Pro",
+    fontWeight: "100",
+    marginBottom: 6,
+  },
+  description: {
+    fontSize: 10,
+  },
   image: {
-    width: 96,
-    height: 96,
+    width: 72,
+    height: 72,
     borderRadius: 4,
   },
 });
