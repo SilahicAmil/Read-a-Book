@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { useEffect, useState } from "react";
 
 import BooksDetails from "../components/BooksDetails/BooksDetails";

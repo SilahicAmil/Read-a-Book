@@ -1,11 +1,4 @@
-import {
-  ActivityIndicator,
-  FlatList,
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { FlatList, SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 import BooksListItem from "../components/BooksList/BooksListItem";
 import FeaturedBook from "../components/FeaturedBook/FeaturedBook";

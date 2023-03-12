@@ -1,6 +1,6 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
-import { AntDesign } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
 const FeaturedBook = ({ title, runtime }) => {
   const featuredBookHandler = () => {
@@ -24,14 +24,14 @@ const FeaturedBook = ({ title, runtime }) => {
             <Text style={styles.description}>{title}</Text>
             <View style={styles.timeContainer}>
               <Text style={styles.time}>
-                <AntDesign
-                  name="playcircleo"
+                <Ionicons
+                  name="play-circle-outline"
                   size={15}
                   color="black"
                   style={styles.icon}
                 />
                 &nbsp;
-                {runtime}hr
+                {runtime}&nbsp;HR(s)
               </Text>
               <Text style={styles.listen}>Listen</Text>
             </View>

@@ -1,5 +1,3 @@
-import { Entypo, Feather } from "@expo/vector-icons";
-
 import AllBooksScreen from "./screens/AllBooksScreen";
 import BooksDetailsScreen from "./screens/BooksDetailsScreen";
 import HomeScreen from "./screens/HomeScreen";
