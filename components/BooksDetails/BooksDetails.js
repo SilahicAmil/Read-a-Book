@@ -28,7 +28,7 @@ const BooksDetails = ({
             By {authorFirst}&nbsp;{authorLast}
           </Text>
         </View>
-
+        {/* Create this into a custom component */}
         <View style={styles.basicInfo}>
           <Card containerStyle={styles.card}>
             <Text style={styles.cardTextHeader}>Realeased</Text>
@@ -43,13 +43,16 @@ const BooksDetails = ({
             <Text style={styles.cardText}>{runtime} hr(s)</Text>
           </Card>
         </View>
+
         <ScrollView style={styles.descriptionContainer}>
           <View style={styles.descriptionInnerContainer}>
             <Text style={styles.descriptionTitle}>Description</Text>
             <Text style={styles.descriptionText}>{description}</Text>
           </View>
         </ScrollView>
+
         <View style={styles.actions}>
+          {/* Create a custom component for this */}
           <Button
             title="Purchase Book"
             type="solid"

@@ -20,6 +20,7 @@ const FeaturedBook = ({ title, runtime }) => {
             }}
             style={styles.image}
           />
+          {/* Create this into custom component */}
           <View style={styles.descriptionContainer}>
             <Text style={styles.description}>{title}</Text>
             <View style={styles.timeContainer}>
