@@ -1,6 +1,8 @@
-import { Button, Card, Icon } from "@rneui/themed";
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Button, Card } from "@rneui/themed";
+import { StyleSheet, Text, View } from "react-native";
 
+import BooksDescription from "./BooksDescription";
+import BooksDetailsInfo from "./BooksDetailsInfo";
 import { Ionicons } from "@expo/vector-icons";
 
 const BooksDetails = ({
@@ -28,28 +30,14 @@ const BooksDetails = ({
             By {authorFirst}&nbsp;{authorLast}
           </Text>
         </View>
-        {/* Create this into a custom component */}
-        <View style={styles.basicInfo}>
-          <Card containerStyle={styles.card}>
-            <Text style={styles.cardTextHeader}>Realeased</Text>
-            <Text style={styles.cardText}>{released}</Text>
-          </Card>
-          <Card containerStyle={styles.card}>
-            <Text style={styles.cardTextHeader}>Sections</Text>
-            <Text style={styles.cardText}>{sections}</Text>
-          </Card>
-          <Card containerStyle={styles.card}>
-            <Text style={styles.cardTextHeader}>Runtime</Text>
-            <Text style={styles.cardText}>{runtime} hr(s)</Text>
-          </Card>
-        </View>
 
-        <ScrollView style={styles.descriptionContainer}>
-          <View style={styles.descriptionInnerContainer}>
-            <Text style={styles.descriptionTitle}>Description</Text>
-            <Text style={styles.descriptionText}>{description}</Text>
-          </View>
-        </ScrollView>
+        <BooksDetailsInfo
+          sections={sections}
+          released={released}
+          runtime={runtime}
+        />
+
+        <BooksDescription description={description} />
 
         <View style={styles.actions}>
           {/* Create a custom component for this */}
@@ -123,44 +111,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     height: 200,
   },
-  basicInfo: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  card: {
-    borderColor: "#E3D4B5",
-    borderRadius: 8,
-  },
-  cardTextHeader: {
-    textAlign: "center",
-    color: "#858585",
-  },
-  cardText: {
-    textAlign: "center",
-    color: "#2F2F2F",
-  },
-  descriptionContainer: {
-    padding: 12,
-    display: "flex",
-    flex: 1,
-  },
-  descriptionInnerContainer: {
-    height: "100%",
-    width: "100%",
-  },
-  descriptionTitle: {
-    fontSize: 16,
-    fontFamily: "DMSerif-Display",
-    color: "#2F2F2F",
-    letterSpacing: 1,
-    marginBottom: 8,
-  },
-  descriptionText: {
-    letterSpacing: 1.1,
-    justifyContent: "center",
-    marginBottom: 16,
-  },
+
   actions: {
     display: "flex",
     flexDirection: "row",

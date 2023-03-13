@@ -2,7 +2,7 @@ import { StyleSheet, View } from "react-native";
 
 import { Chip } from "@rneui/themed";
 
-const FilteredChips = ({}) => {
+const FilterableChips = ({}) => {
   return (
     <>
       <View style={styles.rootContainer}>
@@ -41,7 +41,7 @@ const FilteredChips = ({}) => {
   );
 };
 
-export default FilteredChips;
+export default FilterableChips;
 
 const styles = StyleSheet.create({
   rootContainer: {
