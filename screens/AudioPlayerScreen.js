@@ -12,7 +12,6 @@ const AudioPlayerScreen = ({ navigation, route }) => {
         .from("audiobooks")
         // update this to route.params.title
         .list("Foolish Dictionary", {
-          offset: 0,
           sortBy: { column: "name", order: "asc" },
         });
       setAudioFiles(data);
