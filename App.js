@@ -1,4 +1,5 @@
 import AllBooksScreen from "./screens/AllBooksScreen";
+import AudioPlayerScreen from "./screens/AudioPlayerScreen";
 import BooksDetailsScreen from "./screens/BooksDetailsScreen";
 import HomeScreen from "./screens/HomeScreen";
 import { Ionicons } from "@expo/vector-icons";
@@ -127,6 +128,13 @@ export default function App() {
                 <Ionicons name="bookmarks-outline" size={24} color="black" />
               );
             },
+          }}
+        />
+        <Stack.Screen
+          name="AudioPlayer"
+          component={AudioPlayerScreen}
+          options={{
+            presentation: "modal",
           }}
         />
       </Stack.Navigator>

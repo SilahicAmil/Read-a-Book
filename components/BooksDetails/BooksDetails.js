@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from "react-native";
 import BooksDescription from "./BooksDescription";
 import BooksDetailsInfo from "./BooksDetailsInfo";
 import { Ionicons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 const BooksDetails = ({
   title,
@@ -14,6 +15,11 @@ const BooksDetails = ({
   runtime,
   description,
 }) => {
+  const navigation = useNavigation();
+  const audioPlayerHandler = () => {
+    navigation.navigate("AudioPlayer");
+  };
+
   return (
     <>
       <View style={styles.rootContainer}>
@@ -75,6 +81,7 @@ const BooksDetails = ({
               height: "100%",
               borderRadius: 6,
             }}
+            onPress={audioPlayerHandler}
           />
         </View>
       </View>
