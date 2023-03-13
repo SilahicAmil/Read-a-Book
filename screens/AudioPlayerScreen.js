@@ -1,6 +1,7 @@
 import { Button, Text, View } from "react-native";
 
-const AudioPlayerScreen = ({ navigation }) => {
+const AudioPlayerScreen = ({ navigation, route }) => {
+  console.log(route.params.title);
   return (
     <>
       <View>
