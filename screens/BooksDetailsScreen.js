@@ -1,10 +1,11 @@
-import { StyleSheet, View } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import { useEffect, useState } from "react";
 
 import BooksDetails from "../components/BooksDetails/BooksDetails";
+import { Ionicons } from "@expo/vector-icons";
 import { supabase } from "../lib/supabase";
 
-const BooksDetailsScreen = ({ route }) => {
+const BooksDetailsScreen = ({ route, navigation }) => {
   const [audiobookData, setAudiobookData] = useState([]);
 
   useEffect(() => {
@@ -24,6 +25,12 @@ const BooksDetailsScreen = ({ route }) => {
 
     getAudioBooksData();
   }, []);
+
+  navigation.setOptions({
+    headerRight: () => {
+      return <Ionicons name="bookmarks-outline" size={24} color="black" />;
+    },
+  });
 
   const {
     books_id,

@@ -123,11 +123,6 @@ export default function App() {
           component={BooksDetailsScreen}
           options={{
             title: "Book Info",
-            headerRight: () => {
-              return (
-                <Ionicons name="bookmarks-outline" size={24} color="black" />
-              );
-            },
           }}
         />
         <Stack.Screen

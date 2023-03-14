@@ -2,7 +2,7 @@ import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 import { Ionicons } from "@expo/vector-icons";
 
-const FeaturedBook = ({ title, runtime }) => {
+const FeaturedBook = ({ title, runtime, onPress }) => {
   const featuredBookHandler = () => {
     console.log("featured book");
   };
@@ -12,7 +12,7 @@ const FeaturedBook = ({ title, runtime }) => {
         <Text style={styles.featured}>Featured Book</Text>
         <Pressable
           style={({ pressed }) => (pressed ? styles.pressed : null)}
-          onPress={featuredBookHandler}
+          onPress={onPress}
         >
           <Image
             source={{
@@ -34,7 +34,6 @@ const FeaturedBook = ({ title, runtime }) => {
                 &nbsp;
                 {runtime}&nbsp;HR(s)
               </Text>
-              <Text style={styles.listen}>Listen</Text>
             </View>
           </View>
         </Pressable>

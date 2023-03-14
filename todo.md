@@ -1,7 +1,9 @@
 -- Implement AllBooks Screen
 -- Implement Books Details Screen
 -- Implement Favorite Books Screen
--- Implement User Profile Page (Similiar to good reads will just show user information and list of recent books listened too below)
+-- Implement User Profile Page (will show library of books bought)
+
+<!-- -- Implement AudioPlayer Modal Screen -->
 
 -- Add ability to favorite book
 -- Add Ability to listen to book
