@@ -1,18 +1,22 @@
--- Implement AllBooks Screen
--- Implement Books Details Screen
--- Implement Favorite Books Screen
--- Implement User Profile Page (will show library of books bought)
+<!-- -- Implement AllBooks Screen -->
+<!-- -- Implement Books Details Screen -->
+
+-- Implement User Profile Page (will show library of books bought and favorites )
 
 <!-- -- Implement AudioPlayer Modal Screen -->
 
 -- Add ability to favorite book
 -- Add Ability to listen to book
--- Add Ability to "subscribe" in the app
+-- Add Ability to purchase book in the app
 -- Add Auth
--- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs)
--- Add Audiobook files to supabase storage
+-- Add Stripe Payment System
 
--- Find Logo for APP
+-- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs) - probably use a hook for this
+
+-- Add Audiobook files to supabase storage (WIP)
+
+<!-- -- Find Logo for APP -->
+
 -- Update coloring across app
 -- Add Faux rating to books (IMPORTANT)
 
