@@ -1,23 +1,17 @@
-import { Pressable, StyleSheet } from "react-native";
-
 import AllBooksScreen from "./screens/AllBooksScreen";
 import AudioPlayerScreen from "./screens/AudioPlayerScreen";
 import BooksDetailsScreen from "./screens/BooksDetailsScreen";
-import DrawerScreen from "./screens/DrawerScreen";
 import HomeScreen from "./screens/HomeScreen";
 import { Ionicons } from "@expo/vector-icons";
 import LogoImage from "./components/UI/LogoImage";
 import { NavigationContainer } from "@react-navigation/native";
-import { Text } from "react-native";
 import UserProfileScreen from "./screens/UserProfileScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useFonts } from "expo-font";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
-const Drawer = createDrawerNavigator();
 
 export default function App({ navigation }) {
   const [fontsLoaded] = useFonts({
@@ -39,18 +33,6 @@ export default function App({ navigation }) {
           },
 
           headerTitleAlign: "left",
-          headerRight: () => {
-            return (
-              <Pressable>
-                <Ionicons
-                  name="menu"
-                  size={24}
-                  color="black"
-                  style={styles.rightLogo}
-                />
-              </Pressable>
-            );
-          },
         }}
       >
         <Tab.Screen
@@ -138,12 +120,3 @@ export default function App({ navigation }) {
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  rightLogo: {
-    marginRight: 8,
-  },
-  leftLogo: {
-    marginLeft: 12,
-  },
-});
