@@ -28,7 +28,6 @@ const AudioPlayerScreen = ({ navigation, route }) => {
       headerRight: () => {
         return <Button title="Go Back" onPress={() => navigation.goBack()} />;
       },
-
       title: route.params.title,
     });
   }, []);
