@@ -44,45 +44,46 @@ const BooksDetails = ({
         />
 
         <BooksDescription description={description} />
-
-        <View style={styles.actions}>
-          {/* Create a custom component for this */}
-          <Button
-            title="Purchase Book"
-            type="solid"
-            icon={<Ionicons name="book" size={24} color="black" />}
-            titleStyle={{
-              fontSize: 16,
-              fontFamily: "Kantumury-Pro",
-              color: "#2F2F2F",
-              marginLeft: 4,
-            }}
-            buttonStyle={{
-              backgroundColor: "#BFA054",
-              height: "100%",
-              borderRadius: 6,
-            }}
-            accessibilityLabel="Purchase selected Audiobook"
-          />
-          <Button
-            accessibilityLabel="Play Audio for the Audiobook"
-            title="Play Audio"
-            icon={
-              <Ionicons name="play-circle-outline" size={24} color="white" />
-            }
-            titleStyle={{
-              fontSize: 16,
-              fontFamily: "Kantumury-Pro",
-              marginLeft: 4,
-              color: "white",
-            }}
-            buttonStyle={{
-              backgroundColor: "#2F2F2F",
-              height: "100%",
-              borderRadius: 6,
-            }}
-            onPress={audioPlayerHandler}
-          />
+        <View style={styles.actionsContainer}>
+          <View style={styles.actions}>
+            {/* Create a custom component for this */}
+            <Button
+              title="Purchase Book"
+              type="solid"
+              icon={<Ionicons name="book" size={24} color="black" />}
+              titleStyle={{
+                fontSize: 16,
+                fontFamily: "Kantumury-Pro",
+                color: "#2F2F2F",
+                marginLeft: 4,
+              }}
+              buttonStyle={{
+                backgroundColor: "#BFA054",
+                height: "100%",
+                borderRadius: 6,
+              }}
+              accessibilityLabel="Purchase selected Audiobook"
+            />
+            <Button
+              accessibilityLabel="Play Audio for the Audiobook"
+              title="Play Audio"
+              icon={
+                <Ionicons name="play-circle-outline" size={24} color="white" />
+              }
+              titleStyle={{
+                fontSize: 16,
+                fontFamily: "Kantumury-Pro",
+                marginLeft: 4,
+                color: "white",
+              }}
+              buttonStyle={{
+                backgroundColor: "#2F2F2F",
+                height: "100%",
+                borderRadius: 6,
+              }}
+              onPress={audioPlayerHandler}
+            />
+          </View>
         </View>
       </View>
     </>
@@ -93,8 +94,7 @@ export default BooksDetails;
 
 const styles = StyleSheet.create({
   rootContainer: {
-    backgroundColor: "white",
-
+    backgroundColor: "#fdfcfb",
     height: "100%",
     width: "100%",
     flex: 1,
@@ -118,7 +118,10 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     height: 200,
   },
-
+  actionsContainer: {
+    height: "15%",
+    backgroundColor: "white",
+  },
   actions: {
     display: "flex",
     flexDirection: "row",

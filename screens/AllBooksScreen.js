@@ -54,6 +54,6 @@ const styles = StyleSheet.create({
     display: "flex",
     paddingTop: 8,
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#FBF8F2",
   },
 });
