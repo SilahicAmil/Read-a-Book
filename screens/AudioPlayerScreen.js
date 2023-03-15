@@ -36,7 +36,10 @@ const AudioPlayerScreen = ({ navigation, route }) => {
       .from("audiobooks")
       .getPublicUrl(`Foolish Dictionary/${nameOfFile}`);
 
-    await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
+    await Audio.setAudioModeAsync({
+      playsInSilentModeIOS: true,
+      staysActiveInBackground: true,
+    });
 
     console.log("Loading Sound");
     const { sound } = await Audio.Sound.createAsync({ uri: data["publicUrl"] });
