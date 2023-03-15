@@ -6,7 +6,9 @@
 <!-- -- Implement AudioPlayer Modal Screen -->
 
 -- Add ability to favorite book
--- Add Ability to listen to book
+
+<!-- -- Add Ability to listen to book -->
+
 -- Add Ability to purchase book in the app
 -- Add Auth
 -- Add Stripe Payment System
@@ -17,9 +19,13 @@
 
 <!-- -- Find Logo for APP -->
 
--- Update coloring across app
+<!-- -- Update coloring across app -->
+
 -- Add Faux rating to books (IMPORTANT)
 
 <!-- -- Add some type of react native component library (PRIORITY #1) -->
 
 -- Popular Books should only show 4+ Star Books
+
+-- Add hooks for fetching data in audioplayer screen
+-- Add an audio player on audioplayer screen
