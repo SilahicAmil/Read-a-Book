@@ -1,12 +1,12 @@
-import { Button, Text, View } from "react-native";
+import { Button, FlatList, Text, View } from "react-native";
 import { useEffect, useLayoutEffect, useState } from "react";
 
-import LoadingItem from "../components/UI/LoadingItem";
 import { supabase } from "../lib/supabase";
 
 const AudioPlayerScreen = ({ navigation, route }) => {
   const [audioFiles, setAudioFiles] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [audioFileLink, setAudioFileLink] = useState("");
 
   useEffect(() => {
     setIsLoading(true);
@@ -17,11 +17,19 @@ const AudioPlayerScreen = ({ navigation, route }) => {
         .list("Foolish Dictionary", {
           sortBy: { column: "name", order: "asc" },
         });
+
       setAudioFiles(data);
       setIsLoading(false);
     };
     fetchAudioFiles();
   }, []);
+
+  const audioFileToPlayHandler = async (nameOfFile) => {
+    const { data } = supabase.storage
+      .from("audiobooks")
+      .getPublicUrl(`Foolish Dictionary/${nameOfFile}`);
+    setAudioFileLink(data["publicUrl"]);
+  };
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -36,13 +44,17 @@ const AudioPlayerScreen = ({ navigation, route }) => {
     <>
       <View>
         <Text>Audio Player Screen</Text>
-        {isLoading ? (
-          <LoadingItem />
-        ) : (
-          audioFiles.map((item) => {
-            return <Text key={item.id}>{item.name}</Text>;
-          })
-        )}
+        <FlatList
+          data={audioFiles}
+          renderItem={({ item }) => {
+            return (
+              <Button
+                title={item.name}
+                onPress={() => audioFileToPlayHandler(item.name)}
+              />
+            );
+          }}
+        />
       </View>
     </>
   );
