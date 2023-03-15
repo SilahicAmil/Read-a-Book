@@ -28,21 +28,22 @@ const AudioPlayerScreen = ({ navigation, route }) => {
       headerRight: () => {
         return <Button title="Go Back" onPress={() => navigation.goBack()} />;
       },
+
+      title: route.params.title,
     });
   }, []);
 
   return (
     <>
-      {isLoading ? (
-        <LoadingItem />
-      ) : (
-        audioFiles.map((item) => {
-          return <Text key={item.id}>{item.name}</Text>;
-        })
-      )}
-
       <View>
         <Text>Audio Player Screen</Text>
+        {isLoading ? (
+          <LoadingItem />
+        ) : (
+          audioFiles.map((item) => {
+            return <Text key={item.id}>{item.name}</Text>;
+          })
+        )}
       </View>
     </>
   );
