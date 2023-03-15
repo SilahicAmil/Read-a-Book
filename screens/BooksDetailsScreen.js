@@ -1,5 +1,5 @@
-import { Pressable, StyleSheet, View } from "react-native";
-import { useEffect, useState } from "react";
+import { StyleSheet, View } from "react-native";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 import BooksDetails from "../components/BooksDetails/BooksDetails";
 import { Ionicons } from "@expo/vector-icons";
@@ -26,14 +26,15 @@ const BooksDetailsScreen = ({ route, navigation }) => {
     getAudioBooksData();
   }, []);
 
-  navigation.setOptions({
-    headerRight: () => {
-      return <Ionicons name="bookmarks-outline" size={24} color="black" />;
-    },
-  });
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => {
+        return <Ionicons name="bookmarks-outline" size={24} color="black" />;
+      },
+    });
+  }, []);
 
   const {
-    books_id,
     books_title,
     books_authors_first_name,
     books_authors_last_name,
