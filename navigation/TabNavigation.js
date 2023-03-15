@@ -24,7 +24,6 @@ const TabsNavigator = () => {
         options={{
           title: "Read(a)Book",
           tabBarLabelPosition: "below-icon",
-
           tabBarIcon: ({ focused }) => {
             return (
               <Ionicons
