@@ -9,6 +9,7 @@ import {
 import { useEffect, useLayoutEffect, useState } from "react";
 
 import { Audio } from "expo-av";
+import AudioItem from "../components/AudioPlayer/AudioItem";
 import { supabase } from "../lib/supabase";
 
 const AudioPlayerScreen = ({ navigation, route }) => {
@@ -74,18 +75,15 @@ const AudioPlayerScreen = ({ navigation, route }) => {
             data={audioFiles}
             renderItem={({ item, index }) => {
               return (
-                <View style={styles.actionContainer}>
-                  <Pressable
-                    onPress={() => audioFileToPlayHandler(item.name)}
-                    style={styles.action}
-                  >
-                    <Text>{`Section {${index + 1}}`}</Text>
-                  </Pressable>
-                </View>
+                <AudioItem
+                  onPress={() => audioFileToPlayHandler(item.name)}
+                  index={index}
+                />
               );
             }}
             keyExtractor={(item) => item.id}
           />
+          <Text>Visual Audio Player Goes Here</Text>
         </View>
       </View>
     </>
@@ -105,12 +103,4 @@ const styles = StyleSheet.create({
     height: "50%",
     padding: 8,
   },
-  actionContainer: {
-    width: "100%",
-  },
-  action: {
-    height: 42,
-    backgroundColor: "white",
-  },
-  actionText: {},
 });
