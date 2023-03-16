@@ -65,8 +65,6 @@ const AudioPlayerScreen = ({ navigation, route }) => {
       : undefined;
   }, [sound]);
 
-  const renderAudioItem = (itemData) => {};
-
   return (
     <>
       <View style={styles.rootContainer}>

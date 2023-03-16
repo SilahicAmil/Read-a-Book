@@ -1,7 +1,5 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-import { Ionicons } from "@expo/vector-icons";
-
 const AudioItem = ({ onPress, index }) => {
   return (
     <View style={styles.actionContainer}>
@@ -24,19 +22,18 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   action: {
-    backgroundColor: "white",
+    backgroundColor: "#E3D4B5",
     height: "100%",
     width: "100%",
-    alignItems: "center",
-    justifyContent: "space-around",
+    justifyContent: "center",
   },
   actionText: {
     fontSize: 18,
     fontFamily: "Kantumury-Pro",
     fontWeight: "bold",
-    textAlign: "left",
-    marginHorizontal: 12,
+    marginLeft: 12,
   },
+
   pressed: {
     opacity: 0.8,
     backgroundColor: "white",
