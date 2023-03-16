@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.3,
     shadowRadius: 2,
-    elevation: 8,
+    elevation: 6,
   },
   pressed: { opacity: 0.5 },
   textContainer: {
@@ -99,8 +99,8 @@ const styles = StyleSheet.create({
     width: "70%",
   },
   ratingsContainer: {
-    marginTop: -24,
-    height: 64,
+    marginTop: -28,
+    height: "60%",
     justifyContent: "center",
   },
   innerRatingsContainer: {
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   ratingsText: {
     fontSize: 12,
-    marginLeft: 12,
+    marginLeft: 10,
     fontFamily: "Kantumury-Pro",
   },
   title: {
