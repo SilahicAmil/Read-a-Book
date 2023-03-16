@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
   },
 
   pressed: {
-    opacity: 0.8,
-    backgroundColor: "white",
+    opacity: 0.6,
+    backgroundColor: "#E3D4B5",
     height: "100%",
     width: "100%",
     justifyContent: "center",
