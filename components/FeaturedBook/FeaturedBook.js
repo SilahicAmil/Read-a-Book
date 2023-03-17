@@ -23,18 +23,6 @@ const FeaturedBook = ({ title, runtime, onPress }) => {
           {/* Create this into custom component */}
           <View style={styles.descriptionContainer}>
             <Text style={styles.description}>{title}</Text>
-            <View style={styles.timeContainer}>
-              <Text style={styles.time}>
-                <Ionicons
-                  name="play-circle-outline"
-                  size={15}
-                  color="black"
-                  style={styles.icon}
-                />
-                &nbsp;
-                {runtime}&nbsp;HR(s)
-              </Text>
-            </View>
           </View>
         </Pressable>
       </View>

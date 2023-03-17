@@ -10,12 +10,10 @@ const HomeScreen = ({ navigation }) => {
   const { sampleData, allData, isLoading, isError } = useFetchData();
 
   if (isError === true) {
-    // can use setTimeout eventually to reload the whole app after lik 3-4 seconds
     return <Text>Error!</Text>;
   }
 
   if (isLoading === true) {
-    // return <ActivityIndicator size="large" color="#0000ff" />;
     return <LoadingItem />;
   }
 
@@ -39,7 +37,7 @@ const HomeScreen = ({ navigation }) => {
 
   const featureBookHandler = () => {
     navigation.navigate("BooksDetails", {
-      ...allData[8],
+      ...allData[6],
     });
   };
 
@@ -48,8 +46,7 @@ const HomeScreen = ({ navigation }) => {
       <StatusBar style="auto" />
       <FeaturedBook
         onPress={featureBookHandler}
-        title="Heart of Darkness"
-        runtime="4:10:12"
+        title="Mother Goose in Prose"
       />
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Popular Books</Text>
