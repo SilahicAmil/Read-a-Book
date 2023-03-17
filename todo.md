@@ -1,7 +1,9 @@
 <!-- -- Implement AllBooks Screen -->
 <!-- -- Implement Books Details Screen -->
 
--- Implement User Profile Page (will show library of books bought and favorites )
+<!-- -- Implement User Profile Page  -->
+
+-- Show Books Bought and Favorite Books on user profile screen
 
 <!-- -- Implement AudioPlayer Modal Screen -->
 
