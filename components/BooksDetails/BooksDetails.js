@@ -19,6 +19,9 @@ const BooksDetails = ({
   const audioPlayerHandler = () => {
     navigation.navigate("AudioPlayer", { title });
   };
+  const purchaseBookHandler = () => {
+    navigation.navigate("PurchaseBook", { title });
+  };
 
   return (
     <>
@@ -63,6 +66,7 @@ const BooksDetails = ({
                 borderRadius: 6,
               }}
               accessibilityLabel="Purchase selected Audiobook"
+              onPress={purchaseBookHandler}
             />
             <Button
               accessibilityLabel="Play Audio for the Audiobook"

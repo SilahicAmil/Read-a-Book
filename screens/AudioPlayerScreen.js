@@ -1,11 +1,4 @@
-import {
-  Button,
-  FlatList,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { Button, FlatList, StyleSheet, Text, View } from "react-native";
 import { useEffect, useLayoutEffect, useState } from "react";
 
 import { Audio } from "expo-av";
