@@ -1,5 +1,6 @@
 import AudioPlayerScreen from "./screens/AudioPlayerScreen";
 import BooksDetailsScreen from "./screens/BooksDetailsScreen";
+import FavoritesContextProvider from "./store/context/favorites-context";
 import { NavigationContainer } from "@react-navigation/native";
 import PurchaseBookScreen from "./screens/PurchaseBookScreen";
 import TabsNavigator from "./navigation/TabNavigation";
@@ -19,37 +20,39 @@ export default function App() {
   }
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="TabHome">
-        <Stack.Screen
-          name="Home"
-          component={TabsNavigator}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen
-          name="BooksDetails"
-          component={BooksDetailsScreen}
-          options={{
-            title: "Book Info",
-          }}
-        />
-        <Stack.Screen
-          name="AudioPlayer"
-          component={AudioPlayerScreen}
-          options={{
-            presentation: "modal",
-          }}
-        />
-        <Stack.Screen
-          name="PurchaseBook"
-          component={PurchaseBookScreen}
-          options={{
-            presentation: "modal",
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <FavoritesContextProvider>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="TabHome">
+          <Stack.Screen
+            name="Home"
+            component={TabsNavigator}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="BooksDetails"
+            component={BooksDetailsScreen}
+            options={{
+              title: "Book Info",
+            }}
+          />
+          <Stack.Screen
+            name="AudioPlayer"
+            component={AudioPlayerScreen}
+            options={{
+              presentation: "modal",
+            }}
+          />
+          <Stack.Screen
+            name="PurchaseBook"
+            component={PurchaseBookScreen}
+            options={{
+              presentation: "modal",
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </FavoritesContextProvider>
   );
 }

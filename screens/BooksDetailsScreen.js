@@ -1,12 +1,25 @@
 import { StyleSheet, View } from "react-native";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useContext, useEffect, useLayoutEffect, useState } from "react";
 
 import BooksDetails from "../components/BooksDetails/BooksDetails";
+import { FavoritesContext } from "../store/context/favorites-context";
 import { Ionicons } from "@expo/vector-icons";
 import { supabase } from "../lib/supabase";
 
 const BooksDetailsScreen = ({ route, navigation }) => {
+  const {
+    books_title,
+    books_authors_first_name,
+    books_authors_last_name,
+    books_copyright_year,
+    books_num_sections,
+    books_totaltime,
+    books_description,
+  } = route.params;
   const [audiobookData, setAudiobookData] = useState([]);
+  const favoriteBookCtx = useContext(FavoritesContext);
+
+  const bookIsFavorite = favoriteBookCtx.bookNames.includes(books_title);
 
   useEffect(() => {
     const getAudioBooksData = async () => {
@@ -26,23 +39,29 @@ const BooksDetailsScreen = ({ route, navigation }) => {
     getAudioBooksData();
   }, []);
 
+  const changeFavoriteHandler = () => {
+    if (bookIsFavorite) {
+      favoriteBookCtx.removeFavorite(books_title);
+    } else {
+      favoriteBookCtx.addFavorite(books_title);
+    }
+    console.log(bookIsFavorite);
+  };
+
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => {
-        return <Ionicons name="bookmarks-outline" size={24} color="black" />;
+        return (
+          <Ionicons
+            name={bookIsFavorite ? "bookmarks" : "bookmarks-outline"}
+            size={24}
+            color="black"
+            onPress={changeFavoriteHandler}
+          />
+        );
       },
     });
-  }, []);
-
-  const {
-    books_title,
-    books_authors_first_name,
-    books_authors_last_name,
-    books_copyright_year,
-    books_num_sections,
-    books_totaltime,
-    books_description,
-  } = route.params;
+  }, [changeFavoriteHandler, navigation]);
 
   return (
     <>

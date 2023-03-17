@@ -1,6 +1,10 @@
 import { Text, View } from "react-native";
 
-const UserProfileScreen = ({}) => {
+import { FavoritesContext } from "../store/context/favorites-context";
+import { useContext } from "react";
+
+const UserProfileScreen = ({ route, navigation }) => {
+  console.log(route);
   return (
     <>
       <View>
