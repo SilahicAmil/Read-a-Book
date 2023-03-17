@@ -5,7 +5,8 @@
 
 <!-- -- Implement AudioPlayer Modal Screen -->
 
--- Add ability to favorite book
+-- Add ability to favorite book (need context for this)
+-- Add Faux media player to audio player screen (could use context for this)
 
 <!-- -- Add Ability to listen to book -->
 
@@ -28,4 +29,3 @@
 -- Popular Books should only show 4+ Star Books
 
 -- Add hooks for fetching data in audioplayer screen
--- Add an audio player on audioplayer screen
