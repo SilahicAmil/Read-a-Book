@@ -2,7 +2,6 @@ import AudioPlayerScreen from "./screens/AudioPlayerScreen";
 import BooksDetailsScreen from "./screens/BooksDetailsScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import TabsNavigator from "./navigation/TabNavigation";
-// import TrackPlayer from "react-native-track-player";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useFonts } from "expo-font";
 

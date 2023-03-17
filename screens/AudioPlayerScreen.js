@@ -82,6 +82,7 @@ const AudioPlayerScreen = ({ navigation, route }) => {
             keyExtractor={(item) => item.id}
           />
           <Text>Visual Audio Player Goes Here</Text>
+          {/* will build custom Faux audio player here */}
         </View>
       </View>
     </>
