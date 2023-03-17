@@ -2,32 +2,28 @@
 <!-- -- Implement Books Details Screen -->
 
 <!-- -- Implement User Profile Page  -->
-
--- Show Books Bought and Favorite Books on user profile screen
-
-<!-- -- Implement AudioPlayer Modal Screen -->
-
--- Add ability to favorite book (need context for this)
--- Add Faux media player to audio player screen (could use context for this)
-
 <!-- -- Add Ability to listen to book -->
-
--- Add Ability to purchase book in the app
--- Add Auth
--- Add Stripe Payment System
-
--- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs) - probably use a hook for this
-
--- Add Audiobook files to supabase storage (WIP)
-
+<!-- -- Implement AudioPlayer Modal Screen -->
 <!-- -- Find Logo for APP -->
 
 <!-- -- Update coloring across app -->
+<!-- -- Add some type of react native component library (PRIORITY #1) -->
+<!-- -- Add ability to favorite book (need context for this) -->
+
+-- Show Books Bought and Favorite Books on user profile screen
+-- Implement User Profile UI
+-- Implement Faux media player to audio player screen (could use context for this)
+-- Implement purchase book UI (STRIPE API)
+
+-- Add Ability to purchase book in the app (STRIPE API)
+-- Add Auth
+
+-- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs)
+
+-- Add Audiobook files to supabase storage (WIP)
 
 -- Add Faux rating to books (IMPORTANT)
 
-<!-- -- Add some type of react native component library (PRIORITY #1) -->
-
 -- Popular Books should only show 4+ Star Books
 
--- Add hooks for fetching data in audioplayer screen
+-- Add hooks for fetching data in audioplayer screen (maybe)
