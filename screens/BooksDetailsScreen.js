@@ -1,5 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import { useContext, useEffect, useLayoutEffect, useState } from "react";
+import { useContext, useEffect, useLayoutEffect } from "react";
 
 import BooksDetails from "../components/BooksDetails/BooksDetails";
 import { FavoritesContext } from "../store/context/favorites-context";
@@ -16,7 +16,7 @@ const BooksDetailsScreen = ({ route, navigation }) => {
     books_totaltime,
     books_description,
   } = route.params;
-  const [audiobookData, setAudiobookData] = useState([]);
+
   const favoriteBookCtx = useContext(FavoritesContext);
 
   const bookIsFavorite = favoriteBookCtx.bookNames.includes(books_title);
@@ -25,6 +25,7 @@ const BooksDetailsScreen = ({ route, navigation }) => {
     const getAudioBooksData = async () => {
       const { data, error } = await supabase.storage
         .from("audiobooks")
+        // use books_title here eventually
         .list("Foolish Dictionary", {
           sortBy: { column: "name", order: "asc" },
         });
@@ -32,20 +33,17 @@ const BooksDetailsScreen = ({ route, navigation }) => {
       if (error) {
         return;
       }
-
-      setAudiobookData(data);
     };
 
     getAudioBooksData();
   }, []);
 
-  const changeFavoriteHandler = () => {
+  const favoritesHandler = () => {
     if (bookIsFavorite) {
       favoriteBookCtx.removeFavorite(books_title);
     } else {
       favoriteBookCtx.addFavorite(books_title);
     }
-    console.log(bookIsFavorite);
   };
 
   useLayoutEffect(() => {
@@ -56,12 +54,12 @@ const BooksDetailsScreen = ({ route, navigation }) => {
             name={bookIsFavorite ? "bookmarks" : "bookmarks-outline"}
             size={24}
             color="black"
-            onPress={changeFavoriteHandler}
+            onPress={favoritesHandler}
           />
         );
       },
     });
-  }, [changeFavoriteHandler, navigation]);
+  }, [favoritesHandler, navigation]);
 
   return (
     <>

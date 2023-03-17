@@ -4,11 +4,14 @@ import { FavoritesContext } from "../store/context/favorites-context";
 import { useContext } from "react";
 
 const UserProfileScreen = ({ route, navigation }) => {
-  console.log(route);
+  const favoriteBookCtx = useContext(FavoritesContext);
+  console.log(favoriteBookCtx.bookNames);
+
   return (
     <>
       <View>
         <Text>User Profile Screen</Text>
+        <Text>{favoriteBookCtx.bookNames}</Text>
       </View>
     </>
   );
