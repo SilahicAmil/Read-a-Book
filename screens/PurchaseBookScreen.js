@@ -1,6 +1,16 @@
-import { Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
 
-const PurchaseBookScreen = ({}) => {
+import { useLayoutEffect } from "react";
+
+const PurchaseBookScreen = ({ navigation }) => {
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerLeft: () => {
+        return <Button title="Go Back" onPress={() => navigation.goBack()} />;
+      },
+    });
+  }, []);
+
   return (
     <View>
       <Text>Purchase Book</Text>
