@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { supabase } from "../lib/supabase";
 
@@ -8,7 +8,7 @@ const useFetchData = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setIsLoading(true);
     const fetchData = async () => {
       const { data, error } = await supabase.from("allbooks").select();
