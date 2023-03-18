@@ -10,10 +10,13 @@
 <!-- -- Add some type of react native component library (PRIORITY #1) -->
 <!-- -- Add ability to favorite book (need context for this) -->
 
--- Show Books Bought and Favorite Books on user profile screen
+<!-- -- Show Books Bought and Favorite Books on user profile screen -->
+
 -- Implement User Profile UI
 -- Implement Faux media player to audio player screen (could use context for this)
 -- Implement purchase book UI (STRIPE API)
+
+-- Add hooks for fetching data in audioplayer screen (maybe)
 
 -- Add Ability to purchase book in the app (STRIPE API)
 -- Add Auth
@@ -25,5 +28,3 @@
 -- Add Faux rating to books (IMPORTANT)
 
 -- Popular Books should only show 4+ Star Books
-
--- Add hooks for fetching data in audioplayer screen (maybe)
