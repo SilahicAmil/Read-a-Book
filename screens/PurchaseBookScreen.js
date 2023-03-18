@@ -1,6 +1,5 @@
 import { Button, Text, View } from "react-native";
 
-import ErrorItem from "../components/UI/ErrorItem";
 import { FavoritesContext } from "../store/context/favorites-context";
 import { useContext } from "react";
 import { useLayoutEffect } from "react";

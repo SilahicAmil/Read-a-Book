@@ -5,8 +5,6 @@ import { useContext } from "react";
 
 const UserProfileScreen = ({ route, navigation }) => {
   const favoriteBookCtx = useContext(FavoritesContext);
-  console.log(favoriteBookCtx.bookNames);
-  console.log(favoriteBookCtx.purchasedBookNames);
 
   return (
     <>
