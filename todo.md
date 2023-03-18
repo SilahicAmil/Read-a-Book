@@ -12,13 +12,13 @@
 
 <!-- -- Show Books Bought and Favorite Books on user profile screen -->
 
+-- Use Redux/Slices for instead of React Context
+
 -- Implement User Profile UI
 -- Implement Faux media player to audio player screen (could use context for this)
 -- Implement purchase book UI (STRIPE API)
+-- ^ Add Ability to purchase book in the app (STRIPE API)
 
--- Add hooks for fetching data in audioplayer screen (maybe)
-
--- Add Ability to purchase book in the app (STRIPE API)
 -- Add Auth
 
 -- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs)
