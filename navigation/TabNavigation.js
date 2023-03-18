@@ -42,7 +42,7 @@ const TabsNavigator = () => {
         component={AllBooksScreen}
         options={{
           title: "Explore Books",
-          headerTitleAlign: "center",
+          headerTitleAlign: "left",
           tabBarIcon: ({ focused }) => {
             return (
               <Ionicons

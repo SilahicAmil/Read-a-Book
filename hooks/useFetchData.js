@@ -9,19 +9,24 @@ const useFetchData = () => {
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
     const fetchData = async () => {
-      const { data, error } = await supabase.from("allbooks").select();
-      console.log("loaded");
+      setIsLoading(true);
+      try {
+        const { data, error } = await supabase.from("allbooks").select();
+        console.log("loaded");
 
-      setSampleData(data.slice(0, 10));
-      setAllData(data);
+        setSampleData(data.slice(0, 10));
+        setAllData(data);
 
-      if (error) {
+        if (error) {
+          setIsLoading(false);
+          setIsError(true);
+        }
+
+        setIsLoading(false);
+      } catch (err) {
         setIsError(true);
       }
-
-      setIsLoading(false);
     };
     fetchData();
   }, []);

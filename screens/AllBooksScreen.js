@@ -1,6 +1,7 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
 
 import BooksCard from "../components/AllBooks/BooksCard";
+import ErrorItem from "../components/UI/ErrorItem";
 import FilterableChips from "../components/AllBooks/FilterableChips";
 import LoadingItem from "../components/UI/LoadingItem";
 import useFetchData from "../hooks/useFetchData";
@@ -9,7 +10,7 @@ const AllBooksScreen = ({ navigation }) => {
   const { allData, isLoading, isError } = useFetchData();
 
   if (isError === true) {
-    return <Text>Error...</Text>;
+    return <ErrorItem />;
   }
 
   if (isLoading === true) {

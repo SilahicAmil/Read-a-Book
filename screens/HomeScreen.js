@@ -1,6 +1,7 @@
 import { FlatList, SafeAreaView, StyleSheet, Text, View } from "react-native";
 
 import BooksListItem from "../components/BooksList/BooksListItem";
+import ErrorItem from "../components/UI/ErrorItem";
 import FeaturedBook from "../components/FeaturedBook/FeaturedBook";
 import LoadingItem from "../components/UI/LoadingItem";
 import { StatusBar } from "expo-status-bar";
@@ -10,7 +11,7 @@ const HomeScreen = ({ navigation }) => {
   const { sampleData, allData, isLoading, isError } = useFetchData();
 
   if (isError === true) {
-    return <Text>Error!</Text>;
+    return <ErrorItem />;
   }
 
   if (isLoading === true) {

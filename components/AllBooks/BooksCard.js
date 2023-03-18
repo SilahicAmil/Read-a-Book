@@ -1,5 +1,5 @@
 import { Button, Card } from "@rneui/themed";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 const BooksCard = ({ imageUrl, title, authorFirst, authorLast, onPress }) => {
   return (
