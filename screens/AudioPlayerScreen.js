@@ -41,6 +41,7 @@ const AudioPlayerScreen = ({ navigation, route }) => {
       allowsRecordingIOS: false,
       staysActiveInBackground: true,
       playsInSilentModeIOS: true,
+      interruptionModeIOS: 2,
     });
 
     console.log("Loading Sound");
@@ -50,7 +51,7 @@ const AudioPlayerScreen = ({ navigation, route }) => {
     await sound.playAsync();
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     return sound
       ? () => {
           sound.unloadAsync();
