@@ -14,10 +14,6 @@ const UserProfileScreen = ({}) => {
         <UserHeader />
         <Text>Favorite Books:{favoriteBookCtx.bookNames}</Text>
         <UserFavoritesCard />
-        <Text>
-          Donations to: (only user can see this no one else)
-          {favoriteBookCtx.purchasedBookNames}
-        </Text>
       </ScrollView>
     </>
   );

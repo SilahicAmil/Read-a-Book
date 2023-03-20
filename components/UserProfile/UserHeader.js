@@ -25,7 +25,9 @@ const UserHeader = ({}) => {
           <Text style={styles.name}>Stacy Smith</Text>
           <Text style={styles.joined}>Joined 2023</Text>
         </View>
-        <View style={styles.divider}></View>
+        <View style={styles.divider}>
+          <Text>Badges displyed here</Text>
+        </View>
       </View>
     </>
   );
@@ -64,7 +66,7 @@ const styles = StyleSheet.create({
   },
   divider: {
     width: "95%",
-    height: 16,
+    height: 42,
     backgroundColor: "#E3D4B5",
     marginTop: 12,
     borderRadius: 8,

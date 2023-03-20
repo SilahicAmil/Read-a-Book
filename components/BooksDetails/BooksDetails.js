@@ -49,25 +49,7 @@ const BooksDetails = ({
         <BooksDescription description={description} />
         <View style={styles.actionsContainer}>
           <View style={styles.actions}>
-            {/* Create a custom component for this */}
-            <Button
-              title="Donate"
-              type="solid"
-              icon={<Ionicons name="book" size={24} color="black" />}
-              titleStyle={{
-                fontSize: 16,
-                fontFamily: "Kantumury-Pro",
-                color: "#2F2F2F",
-                marginLeft: 4,
-              }}
-              buttonStyle={{
-                backgroundColor: "#BFA054",
-                height: "100%",
-                borderRadius: 6,
-              }}
-              accessibilityLabel="Purchase selected Audiobook"
-              onPress={purchaseBookHandler}
-            />
+            {/* Create a custom component for this maybe */}
             <Button
               accessibilityLabel="Play Audio for the Audiobook"
               title="Play Audio"

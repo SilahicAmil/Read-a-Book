@@ -16,8 +16,7 @@
 
 -- Implement User Profile UI
 -- Implement Faux media player to audio player screen (could use context for this)
--- Implement donate to LibriVox UI (STRIPE API) - this will be like a donate page
--- ^ Add Ability to donatein the app (STRIPE API)
+-- Implement STRIPE API for donations in user profile screen towards the bottom
 
 -- Add Auth
 
