@@ -1,11 +1,6 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
-import { Ionicons } from "@expo/vector-icons";
-
 const FeaturedBook = ({ title, runtime, onPress }) => {
-  const featuredBookHandler = () => {
-    console.log("featured book");
-  };
   return (
     <>
       <View style={styles.outerContainer}>
