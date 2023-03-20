@@ -1,18 +1,26 @@
 import { StyleSheet, Text, View } from "react-native";
 
 import { Avatar } from "@rneui/themed";
+import { useNavigation } from "@react-navigation/native";
 
 const UserHeader = ({}) => {
+  const navigaton = useNavigation();
   return (
     <>
       <View style={styles.rootContainer}>
         <Avatar
-          size={125}
+          size={130}
           rounded
           source={{
             uri: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80",
           }}
-        />
+        >
+          <Avatar.Accessory
+            size={32}
+            style={styles.avatarIcon}
+            onPress={() => navigaton.navigate("UserProfileInformation")}
+          />
+        </Avatar>
         <View>
           <Text style={styles.name}>Stacy Smith</Text>
           <Text style={styles.joined}>Joined 2023</Text>
@@ -32,7 +40,10 @@ const styles = StyleSheet.create({
     marginVertical: 24,
     backgroundColor: "#FBF8F2",
   },
-
+  avatarIcon: {
+    marginRight: 4,
+    marginBottom: 4,
+  },
   name: {
     fontSize: 24,
     fontFamily: "DMSerif-Display",
