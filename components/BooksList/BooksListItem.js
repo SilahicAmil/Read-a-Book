@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
     fontFamily: "DMSerif-Display",
     fontSize: 18,
     fontWeight: "bold",
+    marginTop: 12,
   },
 
   author: {
