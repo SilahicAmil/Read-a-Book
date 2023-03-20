@@ -1,7 +1,38 @@
-import { StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
 
 import { Avatar } from "@rneui/themed";
+import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+
+const DUMMY_DATA = [
+  {
+    name: "add",
+  },
+  {
+    name: "add-circle",
+  },
+  {
+    name: "add-circle-outline",
+  },
+  {
+    name: "add-circle-sharp",
+  },
+  {
+    name: "add-circle-sharp",
+  },
+  {
+    name: "add-circle-sharp",
+  },
+  {
+    name: "add-circle-sharp",
+  },
+  {
+    name: "add-circle-sharp",
+  },
+  {
+    name: "add-circle-sharp",
+  },
+];
 
 const UserHeader = ({}) => {
   const navigaton = useNavigation();
@@ -25,8 +56,17 @@ const UserHeader = ({}) => {
           <Text style={styles.name}>Stacy Smith</Text>
           <Text style={styles.joined}>Joined 2023</Text>
         </View>
-        <View style={styles.divider}>
-          <Text>Badges displyed here (flatList of icons)</Text>
+        <View style={styles.badgesContainer}>
+          <View>
+            <FlatList
+              data={DUMMY_DATA}
+              renderItem={({ item }) => {
+                return <Ionicons name={item.name} size={24} color="black" />;
+              }}
+              horizontal
+              contentContainerStyle={styles.badges}
+            />
+          </View>
         </View>
       </View>
     </>
@@ -64,7 +104,8 @@ const styles = StyleSheet.create({
     fontFamily: "Kantumury-Pro",
     textAlign: "center",
   },
-  divider: {
+  badgesContainer: {
+    display: "flex",
     width: "95%",
     height: 42,
     backgroundColor: "#E3D4B5",
@@ -80,5 +121,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 2,
     elevation: 6,
+    justifyContent: "center",
+  },
+  badges: {
+    gap: 16,
+    marginHorizontal: 8,
   },
 });
