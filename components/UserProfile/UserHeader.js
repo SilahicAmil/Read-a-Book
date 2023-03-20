@@ -26,7 +26,7 @@ const UserHeader = ({}) => {
           <Text style={styles.joined}>Joined 2023</Text>
         </View>
         <View style={styles.divider}>
-          <Text>Badges displyed here</Text>
+          <Text>Badges displyed here (flatList of icons)</Text>
         </View>
       </View>
     </>
