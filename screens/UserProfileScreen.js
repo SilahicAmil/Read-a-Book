@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text } from "react-native";
 
 import { FavoritesContext } from "../store/context/favorites-context";
 import UserFavoritesCard from "../components/UserProfile/UserFavoritesCard";

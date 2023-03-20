@@ -1,4 +1,4 @@
-import { FlatList, Text, View } from "react-native";
+import { Text, View } from "react-native";
 
 const UserFavoritesCard = ({}) => {
   // pass or use context here idk yet
