@@ -51,7 +51,7 @@ const BooksDetails = ({
           <View style={styles.actions}>
             {/* Create a custom component for this */}
             <Button
-              title="Purchase Book"
+              title="Donate"
               type="solid"
               icon={<Ionicons name="book" size={24} color="black" />}
               titleStyle={{
