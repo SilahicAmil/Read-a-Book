@@ -9,7 +9,6 @@ import { useContext } from "react";
 const UserProfileScreen = ({}) => {
   const favoriteBookCtx = useContext(FavoritesContext);
   const books = favoriteBookCtx.bookNames;
-  console.log(books);
 
   return (
     <>
@@ -21,6 +20,8 @@ const UserProfileScreen = ({}) => {
           renderItem={({ item }) => {
             return <UserFavoritesCard bookName={item} />;
           }}
+          key={(item) => item}
+          nestedScrollEnabled
           rootContainer
           horizontal
         />

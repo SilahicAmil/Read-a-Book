@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     width: "100%",
+    marginBottom: 32,
   },
   cardContainer: {
     padding: 10,
@@ -55,6 +56,7 @@ const styles = StyleSheet.create({
   image: {
     height: "90%",
     width: "100%",
+    borderRadius: 6,
   },
   title: {
     fontSize: 12,
