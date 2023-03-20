@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 import { FavoritesContext } from "../store/context/favorites-context";
+import UserFavoritesCard from "../components/UserProfile/UserFavoritesCard";
 import UserHeader from "../components/UserProfile/UserHeader";
 import { useContext } from "react";
 
@@ -9,14 +10,15 @@ const UserProfileScreen = ({}) => {
 
   return (
     <>
-      <View style={styles.rootContainer}>
+      <ScrollView style={styles.rootContainer}>
         <UserHeader />
         <Text>Favorite Books:{favoriteBookCtx.bookNames}</Text>
+        <UserFavoritesCard />
         <Text>
           Donations to: (only user can see this no one else)
           {favoriteBookCtx.purchasedBookNames}
         </Text>
-      </View>
+      </ScrollView>
     </>
   );
 };

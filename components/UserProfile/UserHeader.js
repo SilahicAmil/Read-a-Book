@@ -43,6 +43,14 @@ const styles = StyleSheet.create({
   avatarIcon: {
     marginRight: 4,
     marginBottom: 4,
+    shadowColor: "black",
+    shadowOffset: {
+      width: 2,
+      height: 2,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 6,
   },
   name: {
     fontSize: 24,
@@ -60,5 +68,15 @@ const styles = StyleSheet.create({
     backgroundColor: "#E3D4B5",
     marginTop: 12,
     borderRadius: 8,
+    borderColor: "rgba(000, 000, 000, .6)",
+    borderWidth: 1,
+    shadowColor: "black",
+    shadowOffset: {
+      width: 3,
+      height: 3,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 6,
   },
 });
