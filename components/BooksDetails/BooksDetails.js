@@ -19,9 +19,6 @@ const BooksDetails = ({
   const audioPlayerHandler = () => {
     navigation.navigate("AudioPlayer", { title });
   };
-  const purchaseBookHandler = () => {
-    navigation.navigate("PurchaseBook", { title });
-  };
 
   return (
     <>
