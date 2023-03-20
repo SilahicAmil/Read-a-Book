@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 import { FavoritesContext } from "../store/context/favorites-context";
 import { FlatList } from "react-native-gesture-handler";
@@ -24,6 +24,9 @@ const UserProfileScreen = ({}) => {
           rootContainer
           horizontal
         />
+        <View>
+          <Text>FAQ Accordion Down Here (or something similiar)</Text>
+        </View>
       </ScrollView>
     </>
   );
