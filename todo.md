@@ -11,10 +11,12 @@
 <!-- -- Add ability to favorite book (need context for this) -->
 
 <!-- -- Show Books Bought and Favorite Books on user profile screen -->
+<!-- -- Implement User Profile UI -->
+
+# --------- TODO BELOW---------
 
 -- Use Redux/Slices for instead of React Context
 
--- Implement User Profile UI
 -- Implement Faux media player to audio player screen (could use context for this)
 -- Implement STRIPE API for donations in user profile screen towards the bottom
 
