@@ -12,20 +12,22 @@
 
 <!-- -- Show Books Bought and Favorite Books on user profile screen -->
 <!-- -- Implement User Profile UI -->
+<!-- -- Popular Books should only show 4+ Star Books -->
 
 # --------- TODO BELOW---------
 
--- Use Redux/Slices for instead of React Context
+-- Use Redux/Slices for instead of React Context (maybe)
 
--- Implement Faux media player to audio player screen (could use context for this)
+-- Implement Faux media player to audio player screen (could use context for this) or figure out React Native Track Player
+
 -- Implement STRIPE API for donations in user profile screen towards the bottom
 
 -- Add Auth
+-- Add Basic Unit Tests
 
 -- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs)
 
 -- Add Audiobook files to supabase storage (WIP)
 
--- Add Faux rating to books (IMPORTANT)
-
--- Popular Books should only show 4+ Star Books
+-- Add faux rating to books (IMPORTANT)
+-- Use unique images for each book
