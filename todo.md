@@ -20,7 +20,12 @@
 
 -- Implement Faux media player to audio player screen (could use context for this) or figure out React Native Track Player
 
+-- Add typical support links at bottom of user profile
 -- Implement STRIPE API for donations in user profile screen towards the bottom
+
+-- Possibly update books_titletime to books millisecond time and do manual calculations to make it like 64.3 hours instead of 64:32:23
+
+-- Find custom badges for user profile screen
 
 -- Add Auth
 -- Add Basic Unit Tests
