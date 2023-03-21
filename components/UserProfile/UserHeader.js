@@ -12,25 +12,25 @@ const DUMMY_DATA = [
     name: "add-circle",
   },
   {
-    name: "add-circle-outline",
+    name: "card",
   },
   {
-    name: "add-circle-sharp",
+    name: "book",
   },
   {
-    name: "add-circle-sharp",
+    name: "book-sharp",
   },
   {
-    name: "add-circle-sharp",
+    name: "book-outline",
   },
   {
-    name: "add-circle-sharp",
+    name: "bookmarks",
   },
   {
-    name: "add-circle-sharp",
+    name: "build",
   },
   {
-    name: "add-circle-sharp",
+    name: "bulb",
   },
 ];
 
