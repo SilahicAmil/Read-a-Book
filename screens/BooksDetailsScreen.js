@@ -13,8 +13,9 @@ const BooksDetailsScreen = ({ route, navigation }) => {
     books_authors_last_name,
     books_copyright_year,
     books_num_sections,
-    books_totaltime,
+
     books_description,
+    books_totaltimesecs,
   } = route.params;
 
   const favoriteBookCtx = useContext(FavoritesContext);
@@ -70,8 +71,8 @@ const BooksDetailsScreen = ({ route, navigation }) => {
           authorLast={books_authors_last_name}
           released={books_copyright_year}
           sections={books_num_sections}
-          runtime={books_totaltime}
           description={books_description}
+          total={books_totaltimesecs}
         />
       </View>
     </>

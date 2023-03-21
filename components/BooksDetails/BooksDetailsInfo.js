@@ -2,7 +2,8 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { Card } from "@rneui/themed";
 
-const BooksDetailsInfo = ({ released, sections, runtime }) => {
+const BooksDetailsInfo = ({ released, sections, total }) => {
+  const time = total / 3600;
   return (
     <View style={styles.basicInfo}>
       <Card containerStyle={styles.card}>
@@ -15,7 +16,7 @@ const BooksDetailsInfo = ({ released, sections, runtime }) => {
       </Card>
       <Card containerStyle={styles.card}>
         <Text style={styles.cardTextHeader}>Runtime</Text>
-        <Text style={styles.cardText}>{runtime} hr(s)</Text>
+        <Text style={styles.cardText}>{time.toFixed(2)} hr(s)</Text>
       </Card>
     </View>
   );

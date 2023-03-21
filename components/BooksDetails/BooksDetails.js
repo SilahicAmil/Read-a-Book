@@ -12,8 +12,8 @@ const BooksDetails = ({
   authorLast,
   released,
   sections,
-  runtime,
   description,
+  total,
 }) => {
   const navigation = useNavigation();
   const audioPlayerHandler = () => {
@@ -40,7 +40,7 @@ const BooksDetails = ({
         <BooksDetailsInfo
           sections={sections}
           released={released}
-          runtime={runtime}
+          total={total}
         />
 
         <BooksDescription description={description} />

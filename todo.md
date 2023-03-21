@@ -14,6 +14,8 @@
 <!-- -- Implement User Profile UI -->
 <!-- -- Popular Books should only show 4+ Star Books -->
 
+<!-- -- Possibly update books_titletime to books millisecond time and do manual calculations to make it like 64.3 hours instead of 64:32:23 -->
+
 # --------- TODO BELOW---------
 
 -- Use Redux/Slices for instead of React Context (maybe)
@@ -24,8 +26,6 @@
 -- Implement Faux media player to audio player screen (could use context for this) or figure out React Native Track Player
 
 -- Find custom badges for user profile screen
-
--- Possibly update books_titletime to books millisecond time and do manual calculations to make it like 64.3 hours instead of 64:32:23
 
 -- Add Auth
 -- Add Basic Unit Tests
