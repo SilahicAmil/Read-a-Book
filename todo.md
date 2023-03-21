@@ -27,6 +27,8 @@
 
 -- Find custom badges for user profile screen
 
+-- Set if no favorite books keep the same height as if there were favorite books
+
 -- Add Auth
 -- Add Basic Unit Tests
 
