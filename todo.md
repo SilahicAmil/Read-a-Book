@@ -16,6 +16,8 @@
 
 <!-- -- Possibly update books_titletime to books millisecond time and do manual calculations to make it like 64.3 hours instead of 64:32:23 -->
 
+<!-- -- Set if no favorite books keep the same height as if there were favorite books -->
+
 # --------- TODO BELOW---------
 
 -- Use Redux/Slices for instead of React Context (maybe)
@@ -25,9 +27,7 @@
 
 -- Implement Faux media player to audio player screen (could use context for this) or figure out React Native Track Player
 
--- Find custom badges for user profile screen
-
--- Set if no favorite books keep the same height as if there were favorite books
+-- Find/Create custom badges for user profile screen
 
 -- Add Auth
 -- Add Basic Unit Tests
