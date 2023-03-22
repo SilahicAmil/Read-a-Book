@@ -15,16 +15,22 @@ const UserProfileScreen = ({}) => {
       <ScrollView style={styles.rootContainer}>
         <UserHeader />
         <Text style={styles.title}>Favorite Books:</Text>
-        <FlatList
-          data={books}
-          renderItem={({ item }) => {
-            return <UserFavoritesCard bookName={item} />;
-          }}
-          key={(item) => item}
-          nestedScrollEnabled
-          rootContainer
-          horizontal
-        />
+        {books.length !== 0 ? (
+          <FlatList
+            data={books}
+            renderItem={({ item }) => {
+              return <UserFavoritesCard bookName={item} />;
+            }}
+            key={(item) => item}
+            nestedScrollEnabled
+            rootContainer
+            horizontal
+          />
+        ) : (
+          <View style={styles.emptyContainer}>
+            <Text style={styles.emptyContainerText}>No Favorite Books :(</Text>
+          </View>
+        )}
         <View>
           <Text>FAQ Accordion Down Here (or something similiar)</Text>
         </View>
@@ -38,6 +44,16 @@ export default UserProfileScreen;
 const styles = StyleSheet.create({
   rootContainer: {
     backgroundColor: "#FBF8F2",
+  },
+  emptyContainer: {
+    height: "95%",
+    display: "flex",
+    justifyContent: "center",
+  },
+  emptyContainerText: {
+    fontSize: 16,
+    marginLeft: "auto",
+    marginRight: "auto",
   },
   title: {
     fontSize: 26,
