@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import { FavoritesContext } from "../store/context/favorites-context";
 import { FlatList } from "react-native-gesture-handler";
@@ -6,7 +6,7 @@ import UserFavoritesCard from "../components/UserProfile/UserFavoritesCard";
 import UserHeader from "../components/UserProfile/UserHeader";
 import { useContext } from "react";
 
-const UserProfileScreen = ({}) => {
+const UserProfileScreen = ({ navigation }) => {
   const favoriteBookCtx = useContext(FavoritesContext);
   const books = favoriteBookCtx.bookNames;
 
@@ -31,7 +31,7 @@ const UserProfileScreen = ({}) => {
             <Text style={styles.emptyContainerText}>No Favorite Books :(</Text>
           </View>
         )}
-        <View>
+        <View styles={styles.whatever}>
           <Text>FAQ Accordion Down Here (or something similiar)</Text>
         </View>
       </ScrollView>
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FBF8F2",
   },
   emptyContainer: {
-    height: "95%",
+    height: "20%",
     display: "flex",
     justifyContent: "center",
   },
@@ -59,5 +59,8 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontFamily: "DMSerif-Display",
     marginLeft: 12,
+  },
+  whatever: {
+    marginBottom: 2,
   },
 });

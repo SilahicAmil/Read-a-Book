@@ -23,7 +23,6 @@
 -- Use Redux/Slices for instead of React Context (maybe)
 
 -- Add typical support links at bottom of user profile
--- Implement STRIPE API for donations in user profile screen towards the bottom
 
 -- Implement Faux media player to audio player screen (could use context for this) or figure out React Native Track Player
 
