@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FBF8F2",
   },
   emptyContainer: {
-    height: "20%",
+    height: "90%",
     display: "flex",
     justifyContent: "center",
   },
