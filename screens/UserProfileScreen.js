@@ -44,6 +44,7 @@ export default UserProfileScreen;
 const styles = StyleSheet.create({
   rootContainer: {
     backgroundColor: "#FBF8F2",
+    flex: 1,
   },
   emptyContainer: {
     height: "90%",

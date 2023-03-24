@@ -28,6 +28,10 @@
 
 -- Find/Create custom badges for user profile screen
 
+-- Add abiliy to update user profile information
+
+-- Send push notifications about books - maybe like 2-3 per day
+
 -- Add Auth
 -- Add Basic Unit Tests
 
