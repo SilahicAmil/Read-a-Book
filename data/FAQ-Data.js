@@ -20,4 +20,10 @@ export const FAQ_DATA = [
     title: "How do I suggest a book?",
     answer: "Please email us at: suggestions@readabook.com",
   },
+  {
+    id: 5,
+    title: "How do I donate to the app?",
+    answer:
+      "We are currently working on a way to donate to the app. 100% of the donations will go to LibriVox to support more audiobook creations. We will update this FAQ when the donation feature is available.",
+  },
 ];
