@@ -20,15 +20,13 @@
 
 <!-- -- Add typical support links at bottom of user profile -->
 
+<!-- -- Implement Faux media player to audio player screen (could use context for this) or figure out React Native Track Player -->
+
 # --------- TODO BELOW---------
-
--- Use Redux/Slices for instead of React Context (maybe)
-
--- Implement Faux media player to audio player screen (could use context for this) or figure out React Native Track Player
 
 -- Find/Create custom badges for user profile screen
 
--- Add abiliy to update user profile information
+-- Add ability to update user profile information (auth)
 
 -- Send push notifications about books - maybe like 2-3 per day
 

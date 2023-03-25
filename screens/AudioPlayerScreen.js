@@ -29,7 +29,7 @@ const AudioPlayerScreen = ({ navigation, route }) => {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerLeft: () => {
-        return <Button title="Go Back" onPress={() => navigation.goBack()} />;
+        return <Button title="Back" onPress={() => navigation.goBack()} />;
       },
       title: route.params.title,
     });
