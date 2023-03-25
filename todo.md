@@ -22,6 +22,8 @@
 
 <!-- -- Implement Faux media player to audio player screen (could use context for this) or figure out React Native Track Player -->
 
+<!-- -- Add faux rating to books (IMPORTANT) -->
+
 # --------- TODO BELOW---------
 
 -- Find/Create custom badges for user profile screen
@@ -35,6 +37,4 @@
 -- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs)
 
 -- Add Audiobook files to supabase storage (WIP)
-
--- Add faux rating to books (IMPORTANT)
--- Use unique images for each book (WIP)
+-- Use unique images for each book (WIP) - have link in DB and fetch from there
