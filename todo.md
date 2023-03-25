@@ -26,12 +26,11 @@
 
 -- Find/Create custom badges for user profile screen
 
--- Add ability to update user profile information (auth)
-
 -- Send push notifications about books - maybe like 2-3 per day
 
 -- Add Auth
--- Add Basic Unit Tests
+
+-- Add Basic Unit Tests (Soon)
 
 -- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs)
 
