@@ -15,6 +15,7 @@ const BooksListItem = ({
   authorLast,
   onPress,
   description,
+  ratings,
 }) => {
   return (
     <>
@@ -52,7 +53,7 @@ const BooksListItem = ({
                     size={15}
                   />
                   <View style={styles.innerRatingsContainer}>
-                    <Text style={styles.ratingsText}>40 Ratings</Text>
+                    <Text style={styles.ratingsText}>{ratings} Ratings</Text>
                   </View>
                 </Text>
               </View>

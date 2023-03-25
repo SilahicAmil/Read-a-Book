@@ -31,6 +31,7 @@ const HomeScreen = ({ navigation }) => {
         authorFirst={itemData.item.books_authors_first_name}
         authorLast={itemData.item.books_authors_last_name}
         description={itemData.item.books_description}
+        ratings={itemData.item.ratings_numbers}
         onPress={bookPressedHandler}
       />
     );
