@@ -13,7 +13,7 @@ const BooksDetailsScreen = ({ route, navigation }) => {
     books_authors_last_name,
     books_copyright_year,
     books_num_sections,
-
+    ratings_numbers,
     books_description,
     books_totaltimesecs,
   } = route.params;
@@ -73,6 +73,7 @@ const BooksDetailsScreen = ({ route, navigation }) => {
           sections={books_num_sections}
           description={books_description}
           total={books_totaltimesecs}
+          ratings={ratings_numbers}
         />
       </View>
     </>

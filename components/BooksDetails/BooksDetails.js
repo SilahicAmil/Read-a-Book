@@ -14,6 +14,7 @@ const BooksDetails = ({
   sections,
   description,
   total,
+  ratings,
 }) => {
   const navigation = useNavigation();
   const audioPlayerHandler = () => {
@@ -35,6 +36,8 @@ const BooksDetails = ({
           <Text style={styles.author}>
             By {authorFirst}&nbsp;{authorLast}
           </Text>
+
+          <Text style={styles.ratings}>{ratings} Ratings</Text>
         </View>
 
         <BooksDetailsInfo
@@ -94,6 +97,13 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: "Kantumury-Pro",
     color: "#858585",
+  },
+  ratings: {
+    fontSize: 12,
+    marginHorizontal: 2,
+    fontFamily: "Kantumury-Pro",
+    alignItems: "center",
+    justifyContent: "center",
   },
   image: {
     width: "95%",
