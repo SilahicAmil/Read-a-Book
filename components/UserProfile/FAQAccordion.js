@@ -1,7 +1,7 @@
-import { Avatar, ListItem } from "@rneui/themed";
 import { StyleSheet, Text, View } from "react-native";
 
 import { FAQ_DATA } from "../../data/FAQ-Data";
+import { ListItem } from "@rneui/themed";
 import { useState } from "react";
 
 const FAQAccordion = ({}) => {
@@ -29,8 +29,9 @@ const FAQAccordion = ({}) => {
                 setExpanded(expanded === item.id ? null : item.id);
               }}
               style={styles.accordion}
+              key={item.id}
             >
-              <ListItem key={item.id} bottomDivider>
+              <ListItem key={item.id}>
                 <ListItem.Content>
                   <ListItem.Subtitle style={styles.accordionAnswer}>
                     {item.answer}
