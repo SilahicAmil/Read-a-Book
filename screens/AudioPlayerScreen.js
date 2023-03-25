@@ -3,11 +3,14 @@ import { useEffect, useLayoutEffect, useState } from "react";
 
 import { Audio } from "expo-av";
 import AudioItem from "../components/AudioPlayer/AudioItem";
+import AudioPlayer from "../components/AudioPlayer/AudioPlayer";
+import { Toast } from "react-native-toast-message/lib/src/Toast";
 import { supabase } from "../lib/supabase";
 
 const AudioPlayerScreen = ({ navigation, route }) => {
   const [audioFiles, setAudioFiles] = useState([]);
   const [sound, setSound] = useState();
+  const [playing, setPlaying] = useState(false);
 
   useEffect(() => {
     const fetchAudioFiles = async () => {
@@ -33,6 +36,10 @@ const AudioPlayerScreen = ({ navigation, route }) => {
   }, []);
 
   const audioFileToPlayHandler = async (nameOfFile) => {
+    Toast.show({
+      type: "info",
+      text1: "Loading Audio",
+    });
     const { data } = supabase.storage
       .from("audiobooks")
       .getPublicUrl(`Foolish Dictionary/${nameOfFile}`);
@@ -49,15 +56,28 @@ const AudioPlayerScreen = ({ navigation, route }) => {
     setSound(sound);
 
     await sound.playAsync();
+    setPlaying(true);
+    Toast.show({
+      type: "success",
+      text1: "Playing Audio",
+      visibilityTime: 3500,
+      autoHide: true,
+    });
   };
 
   useLayoutEffect(() => {
     return sound
       ? () => {
           sound.unloadAsync();
+          setPlaying(false);
         }
       : undefined;
   }, [sound]);
+
+  const stopPlayingAudioHandler = async () => {
+    await sound.stopAsync();
+    setPlaying(false);
+  };
 
   return (
     <>
@@ -75,8 +95,14 @@ const AudioPlayerScreen = ({ navigation, route }) => {
             }}
             keyExtractor={(item) => item.id}
           />
-          <Text>Visual Audio Player Goes Here</Text>
+
+          <Toast />
         </View>
+        <AudioPlayer
+          playing={playing}
+          title={route.params.title}
+          onStop={stopPlayingAudioHandler}
+        />
       </View>
     </>
   );
@@ -90,9 +116,11 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     flex: 1,
+    backgroundColor: "white",
   },
   listContainer: {
-    height: "50%",
+    height: "65%",
     padding: 8,
+    backgroundColor: "#FBF8F2",
   },
 });
