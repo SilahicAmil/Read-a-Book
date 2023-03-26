@@ -1,5 +1,6 @@
 import {
   Image,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -43,20 +44,27 @@ const BooksListItem = ({
                 {description.slice(0, 120)}...
               </Text>
 
-              <View style={styles.ratingsContainer}>
-                <Text>
-                  <AirbnbRating
-                    isDisabled={true}
-                    reviews={false}
-                    count={5}
-                    defaultRating={4}
-                    size={15}
-                  />
-                  <View style={styles.innerRatingsContainer}>
-                    <Text style={styles.ratingsText}>{ratings} Ratings</Text>
-                  </View>
-                </Text>
-              </View>
+              {Platform.OS === "ios" ? (
+                <View style={styles.ratingsContainer}>
+                  <Text>
+                    <>
+                      <AirbnbRating
+                        isDisabled={true}
+                        reviews={false}
+                        count={5}
+                        defaultRating={4}
+                        size={15}
+                      />
+
+                      <View style={styles.innerRatingsContainer}>
+                        <Text style={styles.ratingsText}>
+                          {ratings} Ratings
+                        </Text>
+                      </View>
+                    </>
+                  </Text>
+                </View>
+              ) : null}
             </View>
           </View>
         </Pressable>
@@ -80,10 +88,10 @@ const styles = StyleSheet.create({
   innerContainer: {
     display: "flex",
     flexDirection: "row",
-    borderRadius: 8,
-    padding: 2,
+    borderRadius: 6,
+    padding: Platform.OS === "android" ? 12 : null,
     width: "100%",
-    gap: 8,
+    gap: 6,
     backgroundColor: "#FBF8F2",
     justifyContent: "center",
     alignItems: "center",
@@ -93,7 +101,7 @@ const styles = StyleSheet.create({
       width: 3,
       height: 3,
     },
-    shadowOpacity: 0.3,
+    shadowOpacity: 0.8,
     shadowRadius: 5,
     elevation: 6,
   },
@@ -104,7 +112,8 @@ const styles = StyleSheet.create({
     width: "70%",
   },
   ratingsContainer: {
-    marginTop: -28,
+    marginTop: -40,
+    marginBottom: 6,
     height: "60%",
     justifyContent: "center",
   },

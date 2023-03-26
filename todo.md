@@ -26,7 +26,7 @@
 
 # --------- TODO BELOW---------
 
--- Find/Create custom badges for user profile screen
+-- Find/Create custom badges for user profile screen - maybe attach to userData object within Auth or something
 
 -- Send push notifications about books - maybe like 2-3 per day
 
