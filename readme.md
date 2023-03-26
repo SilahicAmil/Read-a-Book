@@ -14,7 +14,7 @@ My goal was to create a free AudioBook Mobile Application
 
 # Why I built the project this way
 
-- I chose the stack of React Native and Supabase. To really test my knowledge or being able to intergrate mobile and web technologies. Navigation, SQL DB Fetching and Creation and Mp3 File Fetching.
+- I chose the stack of React Native and Supabase. To really test my knowledge or being able to intergrate mobile and web technologies. Navigation, Data Fetching and Mp3 File Fetching.
 
 - My Plan is to become a Full-Stack Developer. This project was to test my knowledge of React Native and the core principles of Development.
 
