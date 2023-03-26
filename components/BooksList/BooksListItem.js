@@ -101,9 +101,9 @@ const styles = StyleSheet.create({
       width: 3,
       height: 3,
     },
-    shadowOpacity: 0.8,
+    shadowOpacity: 0.3,
     shadowRadius: 5,
-    elevation: 6,
+    elevation: 12,
   },
   pressed: { opacity: 0.5 },
   textContainer: {
@@ -112,9 +112,9 @@ const styles = StyleSheet.create({
     width: "70%",
   },
   ratingsContainer: {
-    marginTop: -40,
+    marginTop: -35,
     marginBottom: 6,
-    height: "60%",
+    height: "55%",
     justifyContent: "center",
   },
   innerRatingsContainer: {
