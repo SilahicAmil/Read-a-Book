@@ -23,6 +23,7 @@
 <!-- -- Implement Faux media player to audio player screen (could use context for this) or figure out React Native Track Player -->
 
 <!-- -- Add faux rating to books (IMPORTANT) -->
+<!-- Add readme -->
 
 # --------- TODO BELOW---------
 
