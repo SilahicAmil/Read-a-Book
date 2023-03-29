@@ -24,6 +24,7 @@
 
 <!-- -- Add faux rating to books (IMPORTANT) -->
 <!-- Add readme -->
+<!-- -- Redo BooksListItem -->
 
 # --------- TODO BELOW---------
 

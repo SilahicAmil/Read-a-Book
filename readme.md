@@ -16,7 +16,7 @@ My goal was to create a free AudioBook Mobile Application
 
 - I chose the stack of React Native and Supabase. To really test my knowledge or being able to intergrate mobile and web technologies. Navigation, Data Fetching and Mp3 File Fetching.
 
-- My Plan is to become a Full-Stack Developer. This project was to test my knowledge of React Native and the core principles of Development.
+- My Plan is to become a Full-Stack Web and Mobile Developer. This project was to test my knowledge of React Native and the core principles of development.
 
 - Testing is another key thing I wanted to focus in on. It's an essential part of production applications and I wanted to treat my application as if it were going to be one. Covering essential features to ensure they work.
 
