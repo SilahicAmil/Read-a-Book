@@ -33,6 +33,8 @@
 
 -- Add Auth
 
+-- Update ReadMe to have \_blank for links
+
 -- Add Basic Unit Tests (Soon)
 
 -- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs)
