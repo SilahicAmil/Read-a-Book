@@ -1,3 +1,4 @@
+import { AirbnbRating, ListItem } from "@rneui/themed";
 import {
   Image,
   Platform,
@@ -7,8 +8,6 @@ import {
   Text,
   View,
 } from "react-native";
-
-import { AirbnbRating } from "@rneui/themed";
 
 const BooksListItem = ({
   title,
@@ -21,53 +20,33 @@ const BooksListItem = ({
   return (
     <>
       <ScrollView style={styles.container}>
-        <Pressable
-          onPress={onPress}
-          style={({ pressed }) => (pressed ? styles.pressed : null)}
-        >
-          <View style={styles.innerContainer}>
-            <Image
-              source={{
-                uri: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-              }}
-              alt={title}
-              style={styles.image}
-            />
-
-            <View style={styles.textContainer}>
-              <Text style={styles.title}>{title}</Text>
-              <Text style={styles.author}>
-                {authorFirst} &nbsp;
-                {authorLast}
-              </Text>
-              <Text style={styles.description}>
-                {description.slice(0, 120)}...
-              </Text>
-
-              {Platform.OS === "ios" ? (
-                <View style={styles.ratingsContainer}>
-                  <Text>
-                    <>
-                      <AirbnbRating
-                        isDisabled={true}
-                        reviews={false}
-                        count={5}
-                        defaultRating={4}
-                        size={15}
-                      />
-
-                      <View style={styles.innerRatingsContainer}>
-                        <Text style={styles.ratingsText}>
-                          {ratings} Ratings
-                        </Text>
-                      </View>
-                    </>
-                  </Text>
-                </View>
-              ) : null}
-            </View>
-          </View>
-        </Pressable>
+        <View style={styles.shadowContainer}>
+          <Pressable
+            onPress={onPress}
+            style={({ pressed }) => (pressed ? styles.pressed : null)}
+          >
+            <ListItem containerStyle={styles.innerContainer}>
+              <Image
+                alt={title + "cover"}
+                source={{
+                  uri: "https://images.unsplash.com/photo-1528459105426-b9548367069b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=664&q=80",
+                }}
+                style={styles.image}
+              />
+              <View>
+                <ListItem.Content style={styles.contentContainer}>
+                  <ListItem.Title>{title}</ListItem.Title>
+                  <ListItem.Subtitle>
+                    by {authorFirst}&nbsp;{authorLast}
+                  </ListItem.Subtitle>
+                </ListItem.Content>
+                <Text style={styles.descriptionText}>
+                  {description.slice(0, 125)}...
+                </Text>
+              </View>
+            </ListItem>
+          </Pressable>
+        </View>
       </ScrollView>
     </>
   );
@@ -77,75 +56,44 @@ export default BooksListItem;
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: 16,
+    backgroundColor: "white",
+    marginTop: 12,
+    marginBottom: 12,
     borderRadius: 8,
-    backgroundColor: "#FFF",
-    height: 140,
+    height: 100,
+    display: "flex",
     width: "95%",
     marginLeft: "auto",
     marginRight: "auto",
   },
-  innerContainer: {
-    display: "flex",
-    flexDirection: "row",
-    borderRadius: 6,
-    padding: Platform.OS === "android" ? 12 : 16,
-    width: "100%",
-    gap: 6,
-    backgroundColor: "#FBF8F2",
-    justifyContent: "center",
-    alignItems: "center",
-    marginVertical: 6,
+  shadowContainer: {
     shadowColor: "black",
-    shadowOffset: {
-      width: 3,
-      height: 3,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 5,
+    shadowOffset: { width: 1, height: 8 },
+    shadowOpacity: 0.4,
     elevation: 12,
   },
-  pressed: { opacity: 0.5 },
-  textContainer: {
-    display: "flex",
-    flexDirection: "column",
-    width: "70%",
-  },
-  ratingsContainer: {
-    marginTop: -30,
-    marginBottom: 6,
-    height: "55%",
-    justifyContent: "center",
-  },
-  innerRatingsContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-  },
-  ratingsText: {
-    fontSize: 12,
-    marginLeft: 10,
-    fontFamily: "Kantumury-Pro",
-  },
-  title: {
-    fontFamily: "DMSerif-Display",
-    fontSize: 18,
-    fontWeight: "bold",
-    marginTop: 12,
-  },
-
-  author: {
-    fontSize: 12,
-    fontFamily: "Kantumury-Pro",
-
-    marginBottom: 6,
-  },
-  description: {
-    fontSize: 10,
+  innerContainer: {
+    backgroundColor: "#FBF8F2",
+    width: "100%",
+    height: "100%",
+    borderRadius: 8,
   },
   image: {
-    width: 96,
-    height: 96,
-    borderRadius: 4,
+    width: "20%",
+    height: "100%",
+    borderRadius: 8,
   },
+  contentContainer: {
+    width: "100%",
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+  },
+  descriptionText: {
+    width: "38%",
+
+    fontSize: 12,
+    fontFamily: "Kantumury-Pro",
+  },
+  pressed: { opacity: 0.5 },
 });
