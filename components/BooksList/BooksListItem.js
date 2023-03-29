@@ -67,6 +67,7 @@ const styles = StyleSheet.create({
     marginRight: "auto",
   },
   shadowContainer: {
+    backgroundColor: "white",
     shadowColor: "black",
     shadowOffset: { width: 1, height: 8 },
     shadowOpacity: 0.4,
