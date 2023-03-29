@@ -2,8 +2,7 @@
 
 My goal was to create a free AudioBook Mobile Application
 
-- I built this website based off of a Figma Design: <a href="https://www.figma.com/community/file/1148855963126865475" target="_blank" rel="noopener">Figma Design</a>
-
+- I built this website based off of a Figma Design: [Figma Design](https://www.figma.com/community/file/1148855963126865475)
 - I used detailed push commits to describe updates: [Example Commit](https://github.com/SilahicAmil/Read-a-Book/commit/069e9f95dfd339402caf6838e94ec4e5d9f44149)
 
 # How to navigate this project
