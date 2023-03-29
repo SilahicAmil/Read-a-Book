@@ -119,6 +119,6 @@ const styles = StyleSheet.create({
   },
   badges: {
     gap: 16,
-    marginHorizontal: 12,
+    marginHorizontal: 6,
   },
 });
