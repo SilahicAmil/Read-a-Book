@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     borderRadius: 6,
-    padding: Platform.OS === "android" ? 12 : null,
+    padding: Platform.OS === "android" ? 12 : 16,
     width: "100%",
     gap: 6,
     backgroundColor: "#FBF8F2",
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     width: "70%",
   },
   ratingsContainer: {
-    marginTop: -35,
+    marginTop: -30,
     marginBottom: 6,
     height: "55%",
     justifyContent: "center",

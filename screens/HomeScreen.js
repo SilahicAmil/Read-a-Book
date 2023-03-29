@@ -46,10 +46,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
-      <FeaturedBook
-        onPress={featureBookHandler}
-        title="Mother Goose in Prose"
-      />
+      <FeaturedBook onPress={featureBookHandler} title="Canterville Ghost" />
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Popular Books</Text>
       </View>

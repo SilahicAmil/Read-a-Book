@@ -1,6 +1,7 @@
 import { Button, Card } from "@rneui/themed";
 import { StyleSheet, Text, View } from "react-native";
 
+import { AirbnbRating } from "@rneui/themed";
 import BooksDescription from "./BooksDescription";
 import BooksDetailsInfo from "./BooksDetailsInfo";
 import { Ionicons } from "@expo/vector-icons";
@@ -36,8 +37,10 @@ const BooksDetails = ({
           <Text style={styles.author}>
             By {authorFirst}&nbsp;{authorLast}
           </Text>
-
-          <Text style={styles.ratings}>{ratings} Ratings</Text>
+          <View style={styles.ratingsContainer}>
+            <AirbnbRating size={18} count={4} reviews="" style={styles.stars} />
+            <Text style={styles.ratings}>{ratings} Ratings</Text>
+          </View>
         </View>
 
         <BooksDetailsInfo
@@ -99,10 +102,11 @@ const styles = StyleSheet.create({
     color: "#858585",
   },
   ratings: {
-    fontSize: 12,
+    fontSize: 14,
     marginHorizontal: 2,
     fontFamily: "Kantumury-Pro",
     alignItems: "center",
+    paddingVertical: 10,
     justifyContent: "center",
   },
   image: {
@@ -114,6 +118,16 @@ const styles = StyleSheet.create({
   actionsContainer: {
     height: "15%",
     backgroundColor: "white",
+  },
+  ratingsContainer: {
+    display: "flex",
+    flexDirection: "row",
+    height: 24,
+    alignItems: "center",
+  },
+  stars: {
+    padding: 0,
+    alignItems: "center",
   },
   actions: {
     display: "flex",
