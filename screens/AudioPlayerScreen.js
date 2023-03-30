@@ -77,6 +77,12 @@ const AudioPlayerScreen = ({ navigation, route }) => {
   const stopPlayingAudioHandler = async () => {
     await sound.stopAsync();
     setPlaying(false);
+    Toast.show({
+      type: "info",
+      text1: "Audio Stopped",
+      visibilityTime: 3500,
+      autoHide: true,
+    });
   };
 
   return (
@@ -95,7 +101,6 @@ const AudioPlayerScreen = ({ navigation, route }) => {
             }}
             keyExtractor={(item) => item.id}
           />
-
           <Toast />
         </View>
         <AudioPlayer
