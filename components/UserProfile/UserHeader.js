@@ -1,37 +1,8 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
 
 import { Avatar } from "@rneui/themed";
+import { BADGES_DATA } from "../../data/user-badges";
 import { Ionicons } from "@expo/vector-icons";
-
-const DUMMY_DATA = [
-  {
-    name: "add",
-  },
-  {
-    name: "add-circle",
-  },
-  {
-    name: "card",
-  },
-  {
-    name: "book",
-  },
-  {
-    name: "book-sharp",
-  },
-  {
-    name: "book-outline",
-  },
-  {
-    name: "bookmarks",
-  },
-  {
-    name: "build",
-  },
-  {
-    name: "bulb",
-  },
-];
 
 const UserHeader = ({}) => {
   return (
@@ -51,7 +22,7 @@ const UserHeader = ({}) => {
         <View style={styles.badgesContainer}>
           <View>
             <FlatList
-              data={DUMMY_DATA}
+              data={BADGES_DATA}
               renderItem={({ item }) => {
                 return <Ionicons name={item.name} size={24} color="black" />;
               }}
