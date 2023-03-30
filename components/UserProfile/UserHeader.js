@@ -2,7 +2,6 @@ import { FlatList, StyleSheet, Text, View } from "react-native";
 
 import { Avatar } from "@rneui/themed";
 import { Ionicons } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
 
 const DUMMY_DATA = [
   {
@@ -35,7 +34,6 @@ const DUMMY_DATA = [
 ];
 
 const UserHeader = ({}) => {
-  const navigaton = useNavigation();
   return (
     <>
       <View style={styles.rootContainer}>
