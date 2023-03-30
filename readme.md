@@ -5,6 +5,10 @@ My goal was to create a free AudioBook Mobile Application
 - I built this website based off of a Figma Design: [Figma Design](https://www.figma.com/community/file/1148855963126865475)
 - I used detailed push commits to describe updates: [Example Commit](https://github.com/SilahicAmil/Read-a-Book/commit/069e9f95dfd339402caf6838e94ec4e5d9f44149)
 
+# Repro of Application
+https://user-images.githubusercontent.com/30222571/228984207-cfdc4e35-d6bc-4e9b-a61d-1e50fd1c824a.mov
+
+
 # How to navigate this project
 
 - File fetching using a custom hook: [Example Code](https://github.com/SilahicAmil/Read-a-Book/blob/main/hooks/useFetchData.js)
