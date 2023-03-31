@@ -9,9 +9,7 @@ import { useState } from "react";
 
 const AllBooksScreen = ({ navigation }) => {
   const { allData, isLoading, isError } = useFetchData();
-  const [fiveHourData, setFiveHourData] = useState([]);
-  const [sixTo15HourData, setSixTo15HourData] = useState([]);
-  const [fifteenPlusHourData, setFifteenPlusHourData] = useState([]);
+  const [filteredData, setFilteredData] = useState();
 
   if (isError === true) {
     return <ErrorItem />;
@@ -37,12 +35,16 @@ const AllBooksScreen = ({ navigation }) => {
     );
   };
 
+  const allBooks = () => {
+    setFilteredData(allData);
+  };
+
   // handle filtering here since data is here
   const filter5Hours = () => {
     const filteredData = allData.filter((book) => {
       return book.books_totaltimesecs <= 18000;
     });
-    setFiveHourData(filteredData);
+    setFilteredData(filteredData);
   };
 
   const filter6to15Hours = () => {
@@ -51,14 +53,14 @@ const AllBooksScreen = ({ navigation }) => {
         book.books_totaltimesecs >= 21600 && book.books_totaltimesecs <= 54000
       );
     });
-    setSixTo15HourData(filteredData);
+    setFilteredData(filteredData);
   };
 
   const filter15PlusHours = () => {
     const filteredData = allData.filter((book) => {
       return book.books_totaltimesecs >= 54000;
     });
-    setFifteenPlusHourData(filteredData);
+    setFilteredData(filteredData);
   };
 
   return (
@@ -68,12 +70,11 @@ const AllBooksScreen = ({ navigation }) => {
           onPressFilter5={filter5Hours}
           onPressFilter6to15={filter6to15Hours}
           onPressFilter15Plus={filter15PlusHours}
+          onPressAllBooks={allBooks}
         />
-        <Text> Number of 0-5 hour books: {fiveHourData.length}</Text>
-        <Text> Number of 6-15 hour books: {sixTo15HourData.length}</Text>
-        <Text> Number of 15+ hour books: {fifteenPlusHourData.length}</Text>
+
         <FlatList
-          data={allData}
+          data={filteredData}
           renderItem={renderBooksCard}
           numColumns={2}
           keyExtractor={(item) => item.books_id}

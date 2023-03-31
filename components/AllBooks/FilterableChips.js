@@ -6,10 +6,22 @@ const FilterableChips = ({
   onPressFilter5,
   onPressFilter6to15,
   onPressFilter15Plus,
+  onPressAllBooks,
 }) => {
   return (
     <>
       <View style={styles.rootContainer}>
+        <Chip
+          title="All"
+          type="outline"
+          icon={{
+            name: "clock-o",
+            type: "font-awesome",
+            size: 20,
+            color: "black",
+          }}
+          onPress={onPressAllBooks}
+        />
         <Chip
           title="0-5 hrs"
           type="outline"
