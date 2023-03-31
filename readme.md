@@ -6,8 +6,8 @@ My goal was to create a free AudioBook Mobile Application
 - I used detailed push commits to describe updates: [Example Commit](https://github.com/SilahicAmil/Read-a-Book/commit/069e9f95dfd339402caf6838e94ec4e5d9f44149)
 
 # Repro of Application
-https://user-images.githubusercontent.com/30222571/228984207-cfdc4e35-d6bc-4e9b-a61d-1e50fd1c824a.mov
 
+https://user-images.githubusercontent.com/30222571/228984207-cfdc4e35-d6bc-4e9b-a61d-1e50fd1c824a.mov
 
 # How to navigate this project
 

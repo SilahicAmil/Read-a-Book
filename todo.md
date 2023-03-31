@@ -33,7 +33,7 @@
 
 -- Add Auth
 
--- Add Basic Unit Tests (Soon)
+-- Add Basic Unit Tests
 
 -- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs)
 
