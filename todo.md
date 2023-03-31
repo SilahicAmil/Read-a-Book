@@ -26,14 +26,13 @@
 <!-- Add readme -->
 <!-- -- Redo BooksListItem -->
 <!-- -- Find/Create custom badges for user profile screen - maybe attach to userData object within Auth or something -->
+<!-- -- Add Basic Unit Tests -->
 
 # --------- TODO BELOW---------
 
 -- Send push notifications about books - maybe like 2-3 per day
 
 -- Add Auth
-
--- Add Basic Unit Tests
 
 -- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs)
 

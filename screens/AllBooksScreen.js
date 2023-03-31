@@ -36,7 +36,12 @@ const AllBooksScreen = ({ navigation }) => {
   return (
     <>
       <View style={styles.container}>
-        <FilterableChips />
+        {/* <FilterableChips
+          bookName={allData.books_title}
+          authorFirst={allData.books_authors_first_name}
+          authorLast={allData.books_authors_last_name}
+          runtime={allData.books_totaltimesecs}
+        /> */}
         <FlatList
           data={allData}
           renderItem={renderBooksCard}
