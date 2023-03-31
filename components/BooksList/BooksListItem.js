@@ -1,13 +1,13 @@
-import { AirbnbRating, ListItem } from "@rneui/themed";
 import {
   Image,
-  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
   Text,
   View,
 } from "react-native";
+
+import { ListItem } from "@rneui/themed";
 
 const BooksListItem = ({
   title,

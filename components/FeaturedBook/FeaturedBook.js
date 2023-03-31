@@ -1,6 +1,6 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
-const FeaturedBook = ({ title, runtime, onPress }) => {
+const FeaturedBook = ({ title, onPress }) => {
   return (
     <>
       <View style={styles.outerContainer}>
@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     width: "100%",
-
     backgroundColor: "#ccc",
     zIndex: 1,
     position: "absolute",
@@ -62,7 +61,6 @@ const styles = StyleSheet.create({
     padding: 8,
     borderBottomLeftRadius: 8,
     borderBottomRightRadius: 8,
-
     alignItems: "center",
     justifyContent: "space-between",
     shadowColor: "black",
@@ -74,28 +72,10 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
     elevation: 8,
   },
-
   description: {
     fontFamily: "DMSerif-Display",
     fontWeight: "normal",
     fontSize: 24,
-  },
-  timeContainer: {
-    justifyContent: "center",
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "row",
-  },
-  time: {
-    fontFamily: "Kantumury-Pro",
-    fontWeight: "normal",
-    fontSize: 15,
-    marginRight: 4,
-  },
-  listen: {
-    marginLeft: 4,
-    fontSize: 15,
-    fontFamily: "Kantumury-Pro",
   },
   pressed: {
     opacity: 0.8,

@@ -1,4 +1,4 @@
-import { Button, ScrollView, StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 import FAQAccordion from "../components/UserProfile/FAQAccordion";
 import { FavoritesContext } from "../store/context/favorites-context";
@@ -7,7 +7,7 @@ import UserFavoritesCard from "../components/UserProfile/UserFavoritesCard";
 import UserHeader from "../components/UserProfile/UserHeader";
 import { useContext } from "react";
 
-const UserProfileScreen = ({ navigation }) => {
+const UserProfileScreen = ({}) => {
   const favoriteBookCtx = useContext(FavoritesContext);
   const books = favoriteBookCtx.bookNames;
 
