@@ -28,13 +28,13 @@
 <!-- -- Find/Create custom badges for user profile screen - maybe attach to userData object within Auth or something -->
 <!-- -- Add Basic Unit Tests -->
 <!-- -- Add ability to filter for book runtime on all books screen (0-5hrs, 6hrs-15hrs, 15+ hrs) -->
+<!-- -- Update flatlist with filtered data -->
 
 # --------- TODO BELOW---------
 
 -- Send push notifications about books - maybe like 2-3 per day
 
 -- Add Auth
--- Update flatlist with filtered data
 
 -- Add Audiobook files to supabase storage (WIP)
 -- Use unique images for each book (WIP) - have link in DB and fetch from there
