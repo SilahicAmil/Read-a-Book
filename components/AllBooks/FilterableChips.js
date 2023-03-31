@@ -2,8 +2,7 @@ import { StyleSheet, View } from "react-native";
 
 import { Chip } from "@rneui/themed";
 
-const FilterableChips = ({ allData }) => {
-  console.log();
+const FilterableChips = ({ onPressFilter5 }) => {
   return (
     <>
       <View style={styles.rootContainer}>
@@ -16,6 +15,7 @@ const FilterableChips = ({ allData }) => {
             size: 20,
             color: "black",
           }}
+          onPress={onPressFilter5}
         />
         <Chip
           title="6-15 hrs"

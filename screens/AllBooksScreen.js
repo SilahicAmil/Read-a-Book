@@ -1,13 +1,15 @@
-import { FlatList, StyleSheet, View } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
 
 import BooksCard from "../components/AllBooks/BooksCard";
 import ErrorItem from "../components/UI/ErrorItem";
 import FilterableChips from "../components/AllBooks/FilterableChips";
 import LoadingItem from "../components/UI/LoadingItem";
 import useFetchData from "../hooks/useFetchData";
+import { useState } from "react";
 
 const AllBooksScreen = ({ navigation }) => {
   const { allData, isLoading, isError } = useFetchData();
+  const [fiveHourData, setFiveHourData] = useState([]);
 
   if (isError === true) {
     return <ErrorItem />;
@@ -33,15 +35,18 @@ const AllBooksScreen = ({ navigation }) => {
     );
   };
 
+  // handle filtering here since data is here
+  const filter5Hours = () => {
+    const filteredData = allData.filter((book) => {
+      return book.books_totaltimesecs <= 18000;
+    });
+    setFiveHourData(filteredData);
+  };
   return (
     <>
       <View style={styles.container}>
-        {/* <FilterableChips
-          bookName={allData.books_title}
-          authorFirst={allData.books_authors_first_name}
-          authorLast={allData.books_authors_last_name}
-          runtime={allData.books_totaltimesecs}
-        /> */}
+        <FilterableChips onPressFilter5={filter5Hours} />
+        <Text> Number of 0-5 hour books: {fiveHourData.length}</Text>
         <FlatList
           data={allData}
           renderItem={renderBooksCard}
