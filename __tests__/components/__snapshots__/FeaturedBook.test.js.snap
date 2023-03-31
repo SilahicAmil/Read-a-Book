@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturedBook Component should render correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#FFF",
+      "height": 250,
+      "justifyContent": "center",
+      "marginBottom": 32,
+      "marginTop": 24,
+      "padding": 8,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "fontFamily": "DMSerif-Display",
+        "fontSize": 24,
+        "marginBottom": 10,
+        "textAlign": "left",
+      }
+    }
+  >
+    Featured Book
+  </Text>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+  >
+    <Image
+      source={
+        {
+          "uri": "https://images.unsplash.com/photo-1529589941132-43606325dfb4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1053&q=80",
+        }
+      }
+      style={
+        {
+          "borderRadius": 8,
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#ccc",
+          "borderBottomLeftRadius": 8,
+          "borderBottomRightRadius": 8,
+          "bottom": 0,
+          "display": "flex",
+          "elevation": 8,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "opacity": 0.8,
+          "padding": 8,
+          "position": "absolute",
+          "shadowColor": "black",
+          "shadowOffset": {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 0.57,
+          "shadowRadius": 4.65,
+          "width": "100%",
+          "zIndex": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "fontFamily": "DMSerif-Display",
+            "fontSize": 24,
+            "fontWeight": "normal",
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
