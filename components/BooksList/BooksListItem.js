@@ -15,7 +15,6 @@ const BooksListItem = ({
   authorLast,
   onPress,
   description,
-  ratings,
 }) => {
   return (
     <>

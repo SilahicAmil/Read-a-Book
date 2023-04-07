@@ -4,7 +4,7 @@ import { FAQ_DATA } from "../../data/FAQ-Data";
 import { ListItem } from "@rneui/themed";
 import { useState } from "react";
 
-const FAQAccordion = ({}) => {
+const FAQAccordion = () => {
   const [expanded, setExpanded] = useState();
 
   return (

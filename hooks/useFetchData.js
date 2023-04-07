@@ -13,7 +13,6 @@ const useFetchData = () => {
       setIsLoading(true);
       try {
         const { data, error } = await supabase.from("allbooks").select();
-        console.log("loaded");
 
         setSampleData(data.slice(0, 10));
         setAllData(data);
