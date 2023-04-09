@@ -36,5 +36,4 @@
 
 -- Add Auth
 
--- Add Audiobook files to supabase storage (WIP)
--- Use unique images for each book (WIP) - have link in DB and fetch from there
+-- Use unique images for each book (maybe)
