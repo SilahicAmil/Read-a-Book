@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 
 import BooksCard from "../components/AllBooks/BooksCard";
 import ErrorItem from "../components/UI/ErrorItem";
