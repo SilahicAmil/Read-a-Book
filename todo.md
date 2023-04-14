@@ -32,7 +32,7 @@
 
 # --------- TODO BELOW---------
 
--- Send push notifications about books - maybe like 2-3 per day
+-- Push Notifications
 
 -- Add Auth
 
