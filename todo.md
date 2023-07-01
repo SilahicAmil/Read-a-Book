@@ -36,4 +36,6 @@
 
 -- Add Auth
 
--- Use unique images for each book (maybe)
+-- Use unique images for each book
+
+-- Create a UI Overhaul (make this more modern)
